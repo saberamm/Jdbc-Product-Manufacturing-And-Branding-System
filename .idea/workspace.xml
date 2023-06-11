@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c2f47ccd-e366-44fb-a5d4-0f0c0ae09a74" name="Changes" comment="create users table">
+    <list default="true" id="c2f47ccd-e366-44fb-a5d4-0f0c0ae09a74" name="Changes" comment="create brand and category tables">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/database/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/database/data.sql" afterDir="false" />
     </list>
@@ -61,7 +61,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1686479903834</updated>
-      <workItem from="1686479906468" duration="3149000" />
+      <workItem from="1686479906468" duration="4152000" />
     </task>
     <task id="LOCAL-00001" summary="create project and maven file">
       <created>1686479996115</created>
@@ -84,7 +84,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686483658924</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="create brand and category tables">
+      <created>1686485957994</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1686485957994</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -105,6 +112,7 @@
     <MESSAGE value="create project and maven file" />
     <MESSAGE value="rename the project" />
     <MESSAGE value="create users table" />
-    <option name="LAST_COMMIT_MESSAGE" value="create users table" />
+    <MESSAGE value="create brand and category tables" />
+    <option name="LAST_COMMIT_MESSAGE" value="create brand and category tables" />
   </component>
 </project>
