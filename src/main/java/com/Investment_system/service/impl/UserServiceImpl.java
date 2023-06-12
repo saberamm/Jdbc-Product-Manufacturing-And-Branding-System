@@ -13,23 +13,29 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public void add(User user) {
-
-
+        if (isUserNameExist(user.getUser_name())) {
+            System.out.println("Error : User Name is NOT Available!");
+            return;
+        }
+        if (isEmailExist(user.getEmail())) {
+            System.out.println("Error : Email is NOT Available!");
+            return;
+        } else userRepository.add(user);
     }
 
     @Override
-    public boolean isUserNameAvailabile(String username) {
-        return false;
+    public boolean isUserNameExist(String username) {
+        return userRepository.isUserNameExist(username);
     }
 
     @Override
-    public boolean isEmailAvailabile(String email) {
-        return false;
+    public boolean isEmailExist(String email) {
+        return userRepository.isEmailExist(email);
     }
 
     @Override
     public void delete(long userId) {
-
+        userRepository.delete(userId);
     }
 
 

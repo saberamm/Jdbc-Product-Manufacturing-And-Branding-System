@@ -5,9 +5,9 @@ import com.Investment_system.model.User;
 public interface UserService {
     void add(User user);
 
-    boolean isUserNameAvailabile(String username);
+    boolean isUserNameExist(String username);
 
-    boolean isEmailAvailabile(String email);
+    boolean isEmailExist(String email);
 
     void delete(long userId);
 

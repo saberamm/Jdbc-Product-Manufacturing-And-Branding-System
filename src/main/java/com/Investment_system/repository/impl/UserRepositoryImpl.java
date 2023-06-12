@@ -36,37 +36,37 @@ public class UserRepositoryImpl implements UserRepository {
     }
 
     @Override
-    public boolean isUserNameAvailable(String username) {
+    public boolean isUserNameExist(String username) {
         try {
             PreparedStatement prs = connection.prepareStatement
                     ("SELECT user_name FROM user_table WHERE user_name = ?");
             prs.setString(1, username);
             ResultSet resultSet = prs.executeQuery();
             if (resultSet.next()) {
-                return false;
+                return true;
             }
 
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return true;
+        return false;
     }
 
     @Override
-    public boolean isEmailAvailable(String email) {
+    public boolean isEmailExist(String email) {
         try {
             PreparedStatement prs = connection.prepareStatement
                     ("SELECT email FROM user_table WHERE email = ?");
             prs.setString(1, email);
             ResultSet resultSet = prs.executeQuery();
             if (resultSet.next()) {
-                return false;
+                return true;
             }
 
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return true;
+        return false;
     }
 
     @Override

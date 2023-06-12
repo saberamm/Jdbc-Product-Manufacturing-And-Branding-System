@@ -6,9 +6,9 @@ public interface UserRepository {
 
     void add(User user);
 
-    boolean isUserNameAvailable(String username);
+    boolean isUserNameExist(String username);
 
-    boolean isEmailAvailable(String email);
+    boolean isEmailExist(String email);
 
     void delete(long userId);
 
