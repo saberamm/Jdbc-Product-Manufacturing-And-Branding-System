@@ -11,8 +11,6 @@ public interface UserService {
 
     void delete(long userId);
 
-    User load(long userId);
-
 
     User userAuthentication(String email, String password);
 

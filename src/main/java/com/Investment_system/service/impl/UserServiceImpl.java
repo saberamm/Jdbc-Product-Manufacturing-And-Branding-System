@@ -32,11 +32,6 @@ public class UserServiceImpl implements UserService {
 
     }
 
-    @Override
-    public User load(long userId) {
-        return null;
-    }
-
 
     @Override
     public User userAuthentication(String email, String password) {

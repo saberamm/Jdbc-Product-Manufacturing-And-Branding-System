@@ -4,8 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c2f47ccd-e366-44fb-a5d4-0f0c0ae09a74" name="Changes" comment="add postgres dependency">
+    <list default="true" id="c2f47ccd-e366-44fb-a5d4-0f0c0ae09a74" name="Changes" comment="add user service and repository">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Investment_system/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Investment_system/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Investment_system/repository/impl/UserRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Investment_system/repository/impl/UserRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Investment_system/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Investment_system/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Investment_system/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Investment_system/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Investment_system/ui/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Investment_system/ui/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +63,7 @@
       <workItem from="1686479906468" duration="6748000" />
       <workItem from="1686570590265" duration="1112000" />
       <workItem from="1686571854885" duration="35000" />
-      <workItem from="1686572048419" duration="6533000" />
+      <workItem from="1686572048419" duration="7161000" />
     </task>
     <task id="LOCAL-00001" summary="create project and maven file">
       <created>1686479996115</created>
@@ -116,7 +121,21 @@
       <option name="project" value="LOCAL" />
       <updated>1686574821311</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="add application and secutity context">
+      <created>1686583765471</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1686583765471</updated>
+    </task>
+    <task id="LOCAL-00010" summary="add user service and repository">
+      <created>1686583799352</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1686583799352</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -142,6 +161,8 @@
     <MESSAGE value="add connection" />
     <MESSAGE value="add user model" />
     <MESSAGE value="add postgres dependency" />
-    <option name="LAST_COMMIT_MESSAGE" value="add postgres dependency" />
+    <MESSAGE value="add application and secutity context" />
+    <MESSAGE value="add user service and repository" />
+    <option name="LAST_COMMIT_MESSAGE" value="add user service and repository" />
   </component>
 </project>
