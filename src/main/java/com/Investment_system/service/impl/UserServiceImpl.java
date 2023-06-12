@@ -41,6 +41,6 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User userAuthentication(String email, String password) {
-        return null;
+        return userRepository.userAuthentication(email, password);
     }
 }
