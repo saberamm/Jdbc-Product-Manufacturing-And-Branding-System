@@ -1,4 +1,4 @@
-create table if not exists "users"
+create table if not exists user_table
 (
     user_id   serial
         primary key
@@ -10,16 +10,16 @@ create table if not exists "users"
     password  varchar     not null
 );
 
-alter table "users"
+alter table user_table
     owner to postgres;
 ------------------------------
-create table if not exists "category"
+create table if not exists category_table
 (
         category_id serial primary key  unique  not null ,
         name varchar(30) not null unique ,
         description varchar(30) not null
 );
-alter table  "category"
+alter table  category_table
 owner to postgres;
 ----------------------------
 create table if not exists brand
@@ -36,7 +36,7 @@ create table if not exists product
     product_id serial primary key unique not null ,
     name varchar(20) not null ,
     create_date date not null ,
-    category_id integer not null constraint category_id references "category",
+    category_id integer not null constraint category_id references category_table,
     brand_id integer not null constraint brand_id references brand
 );
 alter table product owner to postgres;
