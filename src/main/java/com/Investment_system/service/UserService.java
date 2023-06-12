@@ -12,6 +12,6 @@ public interface UserService {
     void delete(long userId);
 
 
-    User userAuthentication(String email, String password);
+    User userAuthentication(String user_name, String password);
 
 }

@@ -87,17 +87,17 @@ public class UserRepositoryImpl implements UserRepository {
     }
 
     @Override
-    public User userAuthentication(String email, String password) {
+    public User userAuthentication(String user_name, String password) {
         User toBePassedUser = new User();
         try {
             PreparedStatement prs = connection.prepareStatement
-                    ("SELECT * FROM user_table WHERE email = ? ");
+                    ("SELECT * FROM user_table WHERE user_name = ? ");
 
-            prs.setString(1, email);
+            prs.setString(1, user_name);
 
             ResultSet resultSet = prs.executeQuery();
             if (resultSet.next()) {
-                if (email.equals(resultSet.getString("email")) &&
+                if (user_name.equals(resultSet.getString("user_name")) &&
                         password.equals(resultSet.getString("password"))) {
 
                     toBePassedUser.setUser_id(resultSet.getInt(1));

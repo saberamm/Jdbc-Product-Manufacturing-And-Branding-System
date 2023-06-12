@@ -1,5 +1,6 @@
 package com.Investment_system.ui;
 
+import com.Investment_system.model.User;
 import com.Investment_system.util.ApplicationContext;
 import com.Investment_system.util.SecurityContext;
 
@@ -51,13 +52,33 @@ public class Menu {
             SecurityContext.user_name = username;
             SecurityContext.user_id = ApplicationContext.getUserService().userAuthentication(username, password).getUser_id();
             System.out.println("You have logged in!");
+            SecurityContext.access=true;
         } else {
             System.out.println("Username or passwrod is wrong.");
         }
+        if (SecurityContext.access) Menu.editMenu();
+        else Menu.run();
 
 
     }
 
     public static void signup() {
+        User user = new User();
+        System.out.println("enter your name :");
+        String name=scanner.nextLine();scanner.nextLine();
+        System.out.println("enter your user_name :");
+        String user_name=scanner.nextLine();
+        System.out.println("enter your email :");
+        String email=scanner.nextLine();
+        System.out.println("enter your password :");
+        String password=scanner.nextLine();
+        user.setName(name);
+        user.setUser_name(user_name);
+        user.setEmail(email);
+        user.setPassword(password);
+        ApplicationContext.getUserService().add(user);
+    }
+    public static void editMenu(){
+        System.out.println("editmenuuuuuuuuuu");
     }
 }
