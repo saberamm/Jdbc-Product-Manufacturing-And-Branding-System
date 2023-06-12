@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c2f47ccd-e366-44fb-a5d4-0f0c0ae09a74" name="Changes" comment="add connection">
+    <list default="true" id="c2f47ccd-e366-44fb-a5d4-0f0c0ae09a74" name="Changes" comment="add postgres dependency">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -58,7 +58,7 @@
       <workItem from="1686479906468" duration="6748000" />
       <workItem from="1686570590265" duration="1112000" />
       <workItem from="1686571854885" duration="35000" />
-      <workItem from="1686572048419" duration="2627000" />
+      <workItem from="1686572048419" duration="6533000" />
     </task>
     <task id="LOCAL-00001" summary="create project and maven file">
       <created>1686479996115</created>
@@ -102,7 +102,21 @@
       <option name="project" value="LOCAL" />
       <updated>1686573065182</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="add user model">
+      <created>1686574715271</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1686574715271</updated>
+    </task>
+    <task id="LOCAL-00008" summary="add postgres dependency">
+      <created>1686574821311</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1686574821311</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -126,6 +140,8 @@
     <MESSAGE value="create brand and category tables" />
     <MESSAGE value="create shareholder and product and shareholder_brand tables" />
     <MESSAGE value="add connection" />
-    <option name="LAST_COMMIT_MESSAGE" value="add connection" />
+    <MESSAGE value="add user model" />
+    <MESSAGE value="add postgres dependency" />
+    <option name="LAST_COMMIT_MESSAGE" value="add postgres dependency" />
   </component>
 </project>
