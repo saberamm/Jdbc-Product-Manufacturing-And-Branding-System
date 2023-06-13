@@ -4,13 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c2f47ccd-e366-44fb-a5d4-0f0c0ae09a74" name="Changes" comment="add user service and repository">
+    <list default="true" id="c2f47ccd-e366-44fb-a5d4-0f0c0ae09a74" name="Changes" comment="fix some bugs and add menu methode">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Investment_system/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Investment_system/repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Investment_system/repository/impl/UserRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Investment_system/repository/impl/UserRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Investment_system/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Investment_system/service/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/Investment_system/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Investment_system/service/impl/UserServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/Investment_system/ui/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Investment_system/ui/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Investment_system/ui/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Investment_system/ui/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Investment_system/util/SecurityContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Investment_system/util/SecurityContext.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +51,26 @@
     ]
   }
 }</component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.Investment_system.ui.Main" />
+      <module name="Product-manufacturing-and-branding-system" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.Investment_system.ui.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -63,7 +82,9 @@
       <workItem from="1686479906468" duration="6748000" />
       <workItem from="1686570590265" duration="1112000" />
       <workItem from="1686571854885" duration="35000" />
-      <workItem from="1686572048419" duration="7161000" />
+      <workItem from="1686572048419" duration="7584000" />
+      <workItem from="1686584872952" duration="19676000" />
+      <workItem from="1686661327878" duration="2053000" />
     </task>
     <task id="LOCAL-00001" summary="create project and maven file">
       <created>1686479996115</created>
@@ -135,11 +156,64 @@
       <option name="project" value="LOCAL" />
       <updated>1686583799352</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="add main and write methodes for repo and service interface">
+      <created>1686584386913</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1686584386913</updated>
+    </task>
+    <task id="LOCAL-00012" summary="some change in tables name">
+      <created>1686585134876</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1686585134876</updated>
+    </task>
+    <task id="LOCAL-00013" summary="add methodes body in user repository">
+      <created>1686595874366</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1686595874366</updated>
+    </task>
+    <task id="LOCAL-00014" summary="fix some bugs in repository and service and add body to methods">
+      <created>1686603893572</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1686603893572</updated>
+    </task>
+    <task id="LOCAL-00015" summary="add menu and main">
+      <created>1686605878300</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1686605878300</updated>
+    </task>
+    <task id="LOCAL-00016" summary="fix some bugs and add menu methode">
+      <created>1686609778090</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1686609778090</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+        <option value="Space.CommitStatus" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -163,6 +237,22 @@
     <MESSAGE value="add postgres dependency" />
     <MESSAGE value="add application and secutity context" />
     <MESSAGE value="add user service and repository" />
-    <option name="LAST_COMMIT_MESSAGE" value="add user service and repository" />
+    <MESSAGE value="add main and write methodes for repo and service interface" />
+    <MESSAGE value="some change in tables name" />
+    <MESSAGE value="add methodes body in user repository" />
+    <MESSAGE value="fix some bugs in repository and service and add body to methods" />
+    <MESSAGE value="add menu and main" />
+    <MESSAGE value="fix some bugs and add menu methode" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix some bugs and add menu methode" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.StackOverflowError" package="java.lang" />
+          <option name="timeStamp" value="3" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

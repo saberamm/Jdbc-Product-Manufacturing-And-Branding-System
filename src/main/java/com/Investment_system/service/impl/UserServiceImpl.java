@@ -17,15 +17,15 @@ public class UserServiceImpl implements UserService {
     public void add(User user) {
         if (isUserNameExist(user.getUser_name())) {
             System.out.println("Error : User Name is NOT Available!");
+            Menu.run();
         }
         if (isEmailExist(user.getEmail())) {
             System.out.println("Error : Email is NOT Available!");
+            Menu.run();
         } else {
             userRepository.add(user);
-            SecurityContext.access=true;
+            Menu.editMenu();
         }
-        if (SecurityContext.access) Menu.editMenu();
-        else Menu.run();
     }
 
     @Override
