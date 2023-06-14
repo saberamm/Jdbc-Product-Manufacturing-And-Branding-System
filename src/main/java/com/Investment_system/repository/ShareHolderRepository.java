@@ -11,6 +11,6 @@ public interface ShareHolderRepository {
     Shareholder[] loadAll();
     int rowCounter();
     void update(Shareholder shareholder,int id);
-    boolean isShareholderExist();
+    boolean isShareholderExist(String nationalCode);
     boolean isAnyShareholderExist();
 }

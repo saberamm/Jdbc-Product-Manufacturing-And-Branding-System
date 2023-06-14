@@ -1,30 +1,31 @@
 package com.Investment_system.repository.impl;
 
-import com.Investment_system.model.Category;
-import com.Investment_system.repository.CategoryRepository;
+import com.Investment_system.model.Shareholder;
+import com.Investment_system.repository.ShareHolderRepository;
 
 import java.sql.*;
 
-public class CategoryRepositoryImpl implements CategoryRepository {
+public class ShareHolderRepositoryImpl implements ShareHolderRepository {
     Connection connection;
 
-    public CategoryRepositoryImpl(Connection connection) {
+    public ShareHolderRepositoryImpl(Connection connection) {
         this.connection = connection;
     }
 
     @Override
-    public void add(Category category) {
-        String sql = "INSERT INTO category_table (name , description) VALUES (? , ?) ";
+    public void add(Shareholder shareholder) {
+        String sql = "INSERT INTO shareholder (name , phone_number,national_code) VALUES (? , ? , ?) ";
         try {
             PreparedStatement prs = connection.prepareStatement
                     (sql, Statement.RETURN_GENERATED_KEYS);
 
-            prs.setString(1, category.getName());
-            prs.setString(2, category.getDescription());
+            prs.setString(1, shareholder.getName());
+            prs.setString(2, shareholder.getPhone_number());
+            prs.setString(3, shareholder.getNational_code());
             prs.execute();
             ResultSet resultSet = prs.getGeneratedKeys();
             resultSet.next();
-            category.setId(resultSet.getInt(1));
+            shareholder.setId(resultSet.getInt(1));
             prs.close();
 
         } catch (SQLException e) {
@@ -37,7 +38,7 @@ public class CategoryRepositoryImpl implements CategoryRepository {
         try {
 
             PreparedStatement prs = connection.prepareStatement
-                    ("DELETE FROM category_table WHERE category_id = ? ");
+                    ("DELETE FROM shareholder WHERE shareholder_id = ? ");
 
             prs.setLong(1, id);
 
@@ -50,20 +51,21 @@ public class CategoryRepositoryImpl implements CategoryRepository {
     }
 
     @Override
-    public Category load(int id) {
+    public Shareholder load(int id) {
         try {
             PreparedStatement prs = connection.prepareStatement
-                    ("SELECT * FROM category_table WHERE category_id = ? ");
+                    ("SELECT * FROM shareholder WHERE shareholder_id = ? ");
 
             prs.setLong(1, id);
 
             ResultSet resultSet = prs.executeQuery();
             if (!resultSet.next())
                 return null;
-            return new Category(
+            return new Shareholder(
                     resultSet.getInt(1),
                     resultSet.getString(2),
-                    resultSet.getString(3)
+                    resultSet.getString(3),
+                    resultSet.getString(4)
             );
 
         } catch (SQLException e) {
@@ -72,22 +74,23 @@ public class CategoryRepositoryImpl implements CategoryRepository {
     }
 
     @Override
-    public Category[] loadAll() {
+    public Shareholder[] loadAll() {
         try {
-            Category[] categoryList = new Category[rowCounter()];
-            PreparedStatement prs = connection.prepareStatement("select * from category_table");
+            Shareholder[] shareholderList = new Shareholder[rowCounter()];
+            PreparedStatement prs = connection.prepareStatement("select * from shareholder");
             ResultSet resultSet = prs.executeQuery();
             connection.close();
             int counter = 0;
             while (resultSet.next()) {
-                categoryList[counter] = new Category(
+                shareholderList[counter] = new Shareholder(
                         resultSet.getInt(1),
                         resultSet.getString(2),
-                        resultSet.getString(3)
+                        resultSet.getString(3),
+                        resultSet.getString(4)
                 );
                 counter++;
             }
-            return categoryList;
+            return shareholderList;
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
@@ -97,7 +100,7 @@ public class CategoryRepositoryImpl implements CategoryRepository {
     public int rowCounter() {
         try {
             PreparedStatement prs = connection.prepareStatement
-                    ("SELECT count(*) as rc FROM category_table ");
+                    ("SELECT count(*) as rc FROM shareholder ");
             ResultSet resultSet = prs.executeQuery();
             resultSet.next();
             int count = resultSet.getInt("rc");
@@ -109,12 +112,13 @@ public class CategoryRepositoryImpl implements CategoryRepository {
     }
 
     @Override
-    public void update(Category category, int id) {
+    public void update(Shareholder shareholder, int id) {
         try {
-            PreparedStatement prs = connection.prepareStatement("update category_table set name = ?,description =? where category_id = ? ");
-            prs.setString(1, category.getName());
-            prs.setString(2, category.getDescription());
-            prs.setInt(3,id);
+            PreparedStatement prs = connection.prepareStatement("update shareholder set name = ?,phone_number=?,national_code =? where shareholder_id = ? ");
+            prs.setString(1, shareholder.getName());
+            prs.setString(2, shareholder.getPhone_number());
+            prs.setString(3, shareholder.getNational_code());
+            prs.setInt(4, id);
             prs.executeUpdate();
             connection.close();
         } catch (SQLException e) {
@@ -123,11 +127,11 @@ public class CategoryRepositoryImpl implements CategoryRepository {
     }
 
     @Override
-    public boolean isCategoryExist(String name) {
+    public boolean isShareholderExist(String nationalCode) {
         try {
             PreparedStatement prs = connection.prepareStatement
-                    ("SELECT * FROM category_table WHERE name = ?");
-            prs.setString(1, name);
+                    ("SELECT * FROM shareholder WHERE national_code = ?");
+            prs.setString(1, nationalCode);
             ResultSet resultSet = prs.executeQuery();
             if (resultSet.next()) {
                 return true;
@@ -140,10 +144,10 @@ public class CategoryRepositoryImpl implements CategoryRepository {
     }
 
     @Override
-    public boolean isAnyCategoryExist() {
+    public boolean isAnyShareholderExist() {
         try {
             PreparedStatement prs = connection.prepareStatement
-                    ("SELECT * FROM category_table");
+                    ("SELECT * FROM shareholder");
             ResultSet resultSet = prs.executeQuery();
             if (resultSet.next()) {
                 return true;
@@ -154,4 +158,5 @@ public class CategoryRepositoryImpl implements CategoryRepository {
         }
         return false;
     }
+
 }
