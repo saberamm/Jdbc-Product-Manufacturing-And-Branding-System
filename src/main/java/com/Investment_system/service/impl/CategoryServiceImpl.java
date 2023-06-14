@@ -2,7 +2,6 @@ package com.Investment_system.service.impl;
 
 import com.Investment_system.model.Category;
 import com.Investment_system.repository.CategoryRepository;
-import com.Investment_system.repository.impl.CategoryRepositoryImpl;
 import com.Investment_system.service.CategoryService;
 
 public class CategoryServiceImpl implements CategoryService {
