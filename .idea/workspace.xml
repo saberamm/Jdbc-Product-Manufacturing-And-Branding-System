@@ -4,9 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c2f47ccd-e366-44fb-a5d4-0f0c0ae09a74" name="Changes" comment="add shareholder service interface">
+    <list default="true" id="c2f47ccd-e366-44fb-a5d4-0f0c0ae09a74" name="Changes" comment="add get services methods to application context">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Investment_system/util/ApplicationContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Investment_system/util/ApplicationContext.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Investment_system/model/Brand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Investment_system/model/Brand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Investment_system/model/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Investment_system/model/Category.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Investment_system/model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Investment_system/model/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Investment_system/model/Shareholder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Investment_system/model/Shareholder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Investment_system/repository/BrandRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Investment_system/repository/BrandRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Investment_system/service/BrandService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Investment_system/service/BrandService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +88,7 @@
       <workItem from="1686572048419" duration="7584000" />
       <workItem from="1686584872952" duration="19676000" />
       <workItem from="1686661327878" duration="4322000" />
-      <workItem from="1686728882323" duration="10890000" />
+      <workItem from="1686728882323" duration="17796000" />
     </task>
     <task id="LOCAL-00001" summary="create project and maven file">
       <created>1686479996115</created>
@@ -323,7 +328,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686743632193</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="add get services methods to application context">
+      <created>1686748804811</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1686748804811</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -352,7 +364,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add application and secutity context" />
     <MESSAGE value="add user service and repository" />
     <MESSAGE value="add main and write methodes for repo and service interface" />
     <MESSAGE value="some change in tables name" />
@@ -377,7 +388,8 @@
     <MESSAGE value="add product service interface" />
     <MESSAGE value="add shareholderbrand service interface" />
     <MESSAGE value="add shareholder service interface" />
-    <option name="LAST_COMMIT_MESSAGE" value="add shareholder service interface" />
+    <MESSAGE value="add get services methods to application context" />
+    <option name="LAST_COMMIT_MESSAGE" value="add get services methods to application context" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

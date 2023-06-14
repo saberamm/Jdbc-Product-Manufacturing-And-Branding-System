@@ -9,6 +9,13 @@ public class Shareholder {
     public Shareholder() {
     }
 
+    public Shareholder(int id, String name, String phone_number, String national_code) {
+        this.id = id;
+        this.name = name;
+        this.phone_number = phone_number;
+        this.national_code = national_code;
+    }
+
     public Shareholder(String name, String phone_number, String national_code) {
         this.name = name;
         this.phone_number = phone_number;

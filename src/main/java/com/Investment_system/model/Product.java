@@ -12,6 +12,14 @@ public class Product {
     public Product() {
     }
 
+    public Product(int id, String name, Date create_date, int category_id, int brand_id) {
+        this.id = id;
+        this.name = name;
+        this.create_date = create_date;
+        this.category_id = category_id;
+        this.brand_id = brand_id;
+    }
+
     public Product(String name, Date create_date) {
         this.name = name;
         this.create_date = create_date;
