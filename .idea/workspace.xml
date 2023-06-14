@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c2f47ccd-e366-44fb-a5d4-0f0c0ae09a74" name="Changes" comment="add generated.key option to saved user to save it in security context">
+    <list default="true" id="c2f47ccd-e366-44fb-a5d4-0f0c0ae09a74" name="Changes" comment="add shareholder service interface">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Investment_system/util/ApplicationContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Investment_system/util/ApplicationContext.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +83,7 @@
       <workItem from="1686572048419" duration="7584000" />
       <workItem from="1686584872952" duration="19676000" />
       <workItem from="1686661327878" duration="4322000" />
-      <workItem from="1686728882323" duration="5964000" />
+      <workItem from="1686728882323" duration="10890000" />
     </task>
     <task id="LOCAL-00001" summary="create project and maven file">
       <created>1686479996115</created>
@@ -252,7 +253,77 @@
       <option name="project" value="LOCAL" />
       <updated>1686737193957</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="add brand repository interface">
+      <created>1686743346554</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1686743346554</updated>
+    </task>
+    <task id="LOCAL-00026" summary="add category repository interface">
+      <created>1686743365954</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1686743365954</updated>
+    </task>
+    <task id="LOCAL-00027" summary="add product repository interface">
+      <created>1686743390045</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1686743390045</updated>
+    </task>
+    <task id="LOCAL-00028" summary="add shareholderbrand repository interface">
+      <created>1686743410216</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1686743410216</updated>
+    </task>
+    <task id="LOCAL-00029" summary="add shareholder repository interface">
+      <created>1686743433421</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1686743433421</updated>
+    </task>
+    <task id="LOCAL-00030" summary="add brand service interface">
+      <created>1686743561099</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1686743561099</updated>
+    </task>
+    <task id="LOCAL-00031" summary="add category service interface">
+      <created>1686743576220</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1686743576220</updated>
+    </task>
+    <task id="LOCAL-00032" summary="add product service interface">
+      <created>1686743602607</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1686743602607</updated>
+    </task>
+    <task id="LOCAL-00033" summary="add shareholderbrand service interface">
+      <created>1686743617789</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1686743617789</updated>
+    </task>
+    <task id="LOCAL-00034" summary="add shareholder service interface">
+      <created>1686743632193</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1686743632193</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -281,14 +352,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="create project and maven file" />
-    <MESSAGE value="rename the project" />
-    <MESSAGE value="create users table" />
-    <MESSAGE value="create brand and category tables" />
-    <MESSAGE value="create shareholder and product and shareholder_brand tables" />
-    <MESSAGE value="add connection" />
-    <MESSAGE value="add user model" />
-    <MESSAGE value="add postgres dependency" />
     <MESSAGE value="add application and secutity context" />
     <MESSAGE value="add user service and repository" />
     <MESSAGE value="add main and write methodes for repo and service interface" />
@@ -304,7 +367,17 @@
     <MESSAGE value="add product model" />
     <MESSAGE value="add shareholder model" />
     <MESSAGE value="add generated.key option to saved user to save it in security context" />
-    <option name="LAST_COMMIT_MESSAGE" value="add generated.key option to saved user to save it in security context" />
+    <MESSAGE value="add brand repository interface" />
+    <MESSAGE value="add category repository interface" />
+    <MESSAGE value="add product repository interface" />
+    <MESSAGE value="add shareholderbrand repository interface" />
+    <MESSAGE value="add shareholder repository interface" />
+    <MESSAGE value="add brand service interface" />
+    <MESSAGE value="add category service interface" />
+    <MESSAGE value="add product service interface" />
+    <MESSAGE value="add shareholderbrand service interface" />
+    <MESSAGE value="add shareholder service interface" />
+    <option name="LAST_COMMIT_MESSAGE" value="add shareholder service interface" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
