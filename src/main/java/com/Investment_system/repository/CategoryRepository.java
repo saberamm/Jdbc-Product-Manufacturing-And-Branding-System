@@ -10,6 +10,6 @@ public interface CategoryRepository {
     Category[] loadAll();
     int rowCounter();
     void update(Category category,int id);
-    boolean isCategoryExist();
+    boolean isCategoryExist(String name);
     boolean isAnyCategoryExist();
 }

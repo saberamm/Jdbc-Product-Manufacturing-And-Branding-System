@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c2f47ccd-e366-44fb-a5d4-0f0c0ae09a74" name="Changes" comment="change load methode for brand repository and service">
+    <list default="true" id="c2f47ccd-e366-44fb-a5d4-0f0c0ae09a74" name="Changes" comment="add brand service and brand repository classes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Investment_system/repository/CategoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Investment_system/repository/CategoryRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Investment_system/repository/impl/BrandRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Investment_system/repository/impl/BrandRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Investment_system/service/CategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Investment_system/service/CategoryService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/Investment_system/ui/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Investment_system/ui/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -83,7 +86,7 @@
       <workItem from="1686572048419" duration="7584000" />
       <workItem from="1686584872952" duration="19676000" />
       <workItem from="1686661327878" duration="4322000" />
-      <workItem from="1686728882323" duration="21615000" />
+      <workItem from="1686728882323" duration="23781000" />
     </task>
     <task id="LOCAL-00001" summary="create project and maven file">
       <created>1686479996115</created>
@@ -344,7 +347,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686758739579</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="add brand service and brand repository classes">
+      <created>1686763162951</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1686763162951</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -373,7 +383,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="some change in tables name" />
     <MESSAGE value="add methodes body in user repository" />
     <MESSAGE value="fix some bugs in repository and service and add body to methods" />
     <MESSAGE value="add menu and main" />
@@ -398,7 +407,8 @@
     <MESSAGE value="add get services methods to application context" />
     <MESSAGE value="add a new constructor to all model classes" />
     <MESSAGE value="change load methode for brand repository and service" />
-    <option name="LAST_COMMIT_MESSAGE" value="change load methode for brand repository and service" />
+    <MESSAGE value="add brand service and brand repository classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="add brand service and brand repository classes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

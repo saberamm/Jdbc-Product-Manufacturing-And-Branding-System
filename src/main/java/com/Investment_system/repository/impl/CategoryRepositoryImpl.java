@@ -1,31 +1,31 @@
 package com.Investment_system.repository.impl;
 
 import com.Investment_system.model.Brand;
-import com.Investment_system.repository.BrandRepository;
+import com.Investment_system.model.Category;
+import com.Investment_system.repository.CategoryRepository;
 
 import java.sql.*;
 
-public class BrandRepositoryImpl implements BrandRepository {
+public class CategoryRepositoryImpl implements CategoryRepository {
     Connection connection;
 
-    public BrandRepositoryImpl(Connection connection) {
+    public CategoryRepositoryImpl(Connection connection) {
         this.connection = connection;
     }
 
     @Override
-    public void add(Brand brand) {
-        String sql = "INSERT INTO brand (name , website , description) VALUES (? , ? , ?) ";
+    public void add(Category category) {
+        String sql = "INSERT INTO category_table (name , description) VALUES (? , ?) ";
         try {
             PreparedStatement prs = connection.prepareStatement
                     (sql, Statement.RETURN_GENERATED_KEYS);
 
-            prs.setString(1, brand.getName());
-            prs.setString(2, brand.getWebsite());
-            prs.setString(3, brand.getDescription());
+            prs.setString(1, category.getName());
+            prs.setString(2, category.getDescription());
             prs.execute();
             ResultSet resultSet = prs.getGeneratedKeys();
             resultSet.next();
-            brand.setId(resultSet.getInt(1));
+            category.setId(resultSet.getInt(1));
             prs.close();
 
         } catch (SQLException e) {
@@ -38,7 +38,7 @@ public class BrandRepositoryImpl implements BrandRepository {
         try {
 
             PreparedStatement prs = connection.prepareStatement
-                    ("DELETE FROM brand WHERE brand_id = ? ");
+                    ("DELETE FROM category_table WHERE category_id = ? ");
 
             prs.setLong(1, id);
 
@@ -51,21 +51,20 @@ public class BrandRepositoryImpl implements BrandRepository {
     }
 
     @Override
-    public Brand load(int id) {
+    public Category load(int id) {
         try {
             PreparedStatement prs = connection.prepareStatement
-                    ("SELECT * FROM brand WHERE brand_id = ? ");
+                    ("SELECT * FROM category_table WHERE category_id = ? ");
 
             prs.setLong(1, id);
 
             ResultSet resultSet = prs.executeQuery();
             if (!resultSet.next())
                 return null;
-            return new Brand(
+            return new Category(
                     resultSet.getInt(1),
                     resultSet.getString(2),
-                    resultSet.getString(3),
-                    resultSet.getString(4)
+                    resultSet.getString(3)
             );
 
         } catch (SQLException e) {
@@ -74,23 +73,22 @@ public class BrandRepositoryImpl implements BrandRepository {
     }
 
     @Override
-    public Brand[] loadAll() {
+    public Category[] loadAll() {
         try {
-            Brand[] brandList = new Brand[rowCounter()];
-            PreparedStatement prs = connection.prepareStatement("select * from brand");
+            Category[] categoryList = new Category[rowCounter()];
+            PreparedStatement prs = connection.prepareStatement("select * from category_table");
             ResultSet resultSet = prs.executeQuery();
             connection.close();
             int counter = 0;
             while (resultSet.next()) {
-                brandList[counter] = new Brand(
+                categoryList[counter] = new Category(
                         resultSet.getInt(1),
                         resultSet.getString(2),
-                        resultSet.getString(3),
-                        resultSet.getString(4)
+                        resultSet.getString(3)
                 );
                 counter++;
             }
-            return brandList;
+            return categoryList;
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
@@ -100,7 +98,7 @@ public class BrandRepositoryImpl implements BrandRepository {
     public int rowCounter() {
         try {
             PreparedStatement prs = connection.prepareStatement
-                    ("SELECT count(*) as rc FROM brand ");
+                    ("SELECT count(*) as rc FROM category_table ");
             ResultSet resultSet = prs.executeQuery();
             resultSet.next();
             int count = resultSet.getInt("rc");
@@ -112,13 +110,12 @@ public class BrandRepositoryImpl implements BrandRepository {
     }
 
     @Override
-    public void update(Brand brand, int id) {
+    public void update(Category category, int id) {
         try {
-            PreparedStatement prs = connection.prepareStatement("update brand set name = ?, website = ?,description =? where brand_id = ? ");
-            prs.setString(1, brand.getName());
-            prs.setString(2, brand.getWebsite());
-            prs.setString(3, brand.getDescription());
-            prs.setInt(4,id);
+            PreparedStatement prs = connection.prepareStatement("update category_table set name = ?,description =? where category_id = ? ");
+            prs.setString(1, category.getName());
+            prs.setString(2, category.getDescription());
+            prs.setInt(3,id);
             prs.executeUpdate();
             connection.close();
         } catch (SQLException e) {
@@ -127,10 +124,10 @@ public class BrandRepositoryImpl implements BrandRepository {
     }
 
     @Override
-    public boolean isBrandExist(String name) {
+    public boolean isCategoryExist(String name) {
         try {
             PreparedStatement prs = connection.prepareStatement
-                    ("SELECT * FROM brand WHERE name = ?");
+                    ("SELECT * FROM category_table WHERE name = ?");
             prs.setString(1, name);
             ResultSet resultSet = prs.executeQuery();
             if (resultSet.next()) {
@@ -144,10 +141,10 @@ public class BrandRepositoryImpl implements BrandRepository {
     }
 
     @Override
-    public boolean isAnyBrandExist() {
+    public boolean isAnyCategoryExist() {
         try {
             PreparedStatement prs = connection.prepareStatement
-                    ("SELECT * FROM brand");
+                    ("SELECT * FROM category_table");
             ResultSet resultSet = prs.executeQuery();
             if (resultSet.next()) {
                 return true;
