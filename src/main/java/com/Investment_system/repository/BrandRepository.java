@@ -9,6 +9,6 @@ public interface BrandRepository {
     Brand[] loadAll();
     int rowCounter();
     void update(Brand brand,int id);
-    boolean isBrandExist();
+    boolean isBrandExist(String name);
     boolean isAnyBrandExist();
 }
