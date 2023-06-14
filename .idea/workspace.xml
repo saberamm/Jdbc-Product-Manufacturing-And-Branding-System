@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c2f47ccd-e366-44fb-a5d4-0f0c0ae09a74" name="Changes" comment="add shareholder service and shareholder repository classes">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Investment_system/service/impl/CategoryServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Investment_system/service/impl/CategoryServiceImpl.java" afterDir="false" />
+    <list default="true" id="c2f47ccd-e366-44fb-a5d4-0f0c0ae09a74" name="Changes" comment="add shareholder_brand service and shareholder_brand repository classes">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Investment_system/repository/impl/BrandRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Investment_system/repository/impl/BrandRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Investment_system/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Investment_system/service/impl/UserServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/Investment_system/ui/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Investment_system/ui/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Investment_system/ui/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Investment_system/ui/menus/UserMenu.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +58,7 @@
       <module name="Product-manufacturing-and-branding-system" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.Investment_system.ui.*" />
+          <option name="PATTERN" value="com.Investment_system.ui.menus.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -83,7 +86,7 @@
       <workItem from="1686572048419" duration="7584000" />
       <workItem from="1686584872952" duration="19676000" />
       <workItem from="1686661327878" duration="4322000" />
-      <workItem from="1686728882323" duration="26177000" />
+      <workItem from="1686728882323" duration="37616000" />
     </task>
     <task id="LOCAL-00001" summary="create project and maven file">
       <created>1686479996115</created>
@@ -365,7 +368,21 @@
       <option name="project" value="LOCAL" />
       <updated>1686773033070</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="add product service and product repository classes">
+      <created>1686774079873</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1686774079873</updated>
+    </task>
+    <task id="LOCAL-00042" summary="add shareholder_brand service and shareholder_brand repository classes">
+      <created>1686774537307</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1686774537307</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -394,8 +411,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add menu and main" />
-    <MESSAGE value="fix some bugs and add menu methode" />
     <MESSAGE value="fix some bugs" />
     <MESSAGE value="add brand model" />
     <MESSAGE value="add category model" />
@@ -419,7 +434,9 @@
     <MESSAGE value="add brand service and brand repository classes" />
     <MESSAGE value="add category service and category repository classes" />
     <MESSAGE value="add shareholder service and shareholder repository classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="add shareholder service and shareholder repository classes" />
+    <MESSAGE value="add product service and product repository classes" />
+    <MESSAGE value="add shareholder_brand service and shareholder_brand repository classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="add shareholder_brand service and shareholder_brand repository classes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

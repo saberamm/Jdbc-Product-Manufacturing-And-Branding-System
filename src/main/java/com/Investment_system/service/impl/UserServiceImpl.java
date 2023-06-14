@@ -3,8 +3,7 @@ package com.Investment_system.service.impl;
 import com.Investment_system.model.User;
 import com.Investment_system.repository.UserRepository;
 import com.Investment_system.service.UserService;
-import com.Investment_system.ui.Menu;
-import com.Investment_system.util.SecurityContext;
+import com.Investment_system.ui.menus.UserMenu;
 
 public class UserServiceImpl implements UserService {
     UserRepository userRepository;
@@ -17,14 +16,14 @@ public class UserServiceImpl implements UserService {
     public void add(User user) {
         if (isUserNameExist(user.getUser_name())) {
             System.out.println("Error : User Name is NOT Available!");
-            Menu.run();
+            UserMenu.UserRun();
         }
         if (isEmailExist(user.getEmail())) {
             System.out.println("Error : Email is NOT Available!");
-            Menu.run();
+            UserMenu.UserRun();
         } else {
             userRepository.add(user);
-            Menu.editMenu();
+            UserMenu.editMenu();
         }
     }
 

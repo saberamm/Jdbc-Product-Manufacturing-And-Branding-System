@@ -29,7 +29,8 @@ public class BrandRepositoryImpl implements BrandRepository {
             prs.close();
 
         } catch (SQLException e) {
-            e.printStackTrace();
+            if(e.getSQLState().equals("23505")) System.out.println("*****the brand name already exist*****");
+            else e.printStackTrace();
         }
     }
 
@@ -122,7 +123,8 @@ public class BrandRepositoryImpl implements BrandRepository {
             prs.executeUpdate();
             connection.close();
         } catch (SQLException e) {
-            throw new RuntimeException(e);
+            if(e.getSQLState().equals("23505")) System.out.println("*****the brand name already exist*****");
+            else e.printStackTrace();
         }
     }
 
