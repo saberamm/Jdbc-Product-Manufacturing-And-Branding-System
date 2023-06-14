@@ -77,6 +77,8 @@ public class Menu {
         user.setPassword(password);
         if (user.getEmail().matches(email_pattern) && user.getPassword().matches(pass_pattern)) {
             ApplicationContext.getUserService().add(user);
+            SecurityContext.user_id=user.getUser_id();
+            SecurityContext.user_name=user.getUser_name();
         }
         else {
             System.out.println("your email or password(use 8 char and upper and lower and symbol) not correct");

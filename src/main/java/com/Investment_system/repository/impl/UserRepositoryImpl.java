@@ -3,10 +3,7 @@ package com.Investment_system.repository.impl;
 import com.Investment_system.model.User;
 import com.Investment_system.repository.UserRepository;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 
 public class UserRepositoryImpl implements UserRepository {
     Connection connection;
@@ -20,14 +17,16 @@ public class UserRepositoryImpl implements UserRepository {
         String sql = "INSERT INTO user_table (name , user_name , email,password) VALUES (? , ? , ? , ?) ";
         try {
             PreparedStatement prs = connection.prepareStatement
-                    (sql);
+                    (sql, Statement.RETURN_GENERATED_KEYS);
 
             prs.setString(1, user.getName());
             prs.setString(2, user.getUser_name());
             prs.setString(3, user.getEmail());
             prs.setString(4, user.getPassword());
-
             prs.execute();
+            ResultSet resultSet = prs.getGeneratedKeys();
+            resultSet.next();
+            user.setUser_id(resultSet.getInt(1));
             prs.close();
 
         } catch (SQLException e) {
