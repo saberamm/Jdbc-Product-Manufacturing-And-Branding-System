@@ -4,7 +4,9 @@ public class Category {
     int id;
     String name;
     String description;
-    public Category(){}
+
+    public Category() {
+    }
 
     public Category(int id, String name, String description) {
         this.id = id;

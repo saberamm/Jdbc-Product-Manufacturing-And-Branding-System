@@ -22,12 +22,12 @@ public class BrandServiceImpl implements BrandService {
 
     @Override
     public void delete(int id) {
-    brandRepository.delete(id);
+        brandRepository.delete(id);
     }
 
     @Override
     public Brand load(int id) {
-       return brandRepository.load(id);
+        return brandRepository.load(id);
     }
 
     @Override
@@ -42,7 +42,7 @@ public class BrandServiceImpl implements BrandService {
 
     @Override
     public void update(Brand brand, int id) {
-    brandRepository.update(brand,id);
+        brandRepository.update(brand, id);
     }
 
     @Override

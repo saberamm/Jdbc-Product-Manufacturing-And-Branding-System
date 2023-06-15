@@ -29,8 +29,8 @@ public class BrandRepositoryImpl implements BrandRepository {
             prs.close();
 
         } catch (SQLException e) {
-            if(e.getSQLState().equals("23505")) System.out.println("*****the brand name already exist*****");
-            if(e.getSQLState().equals("23503")) System.out.println("*****the brand used for a foreign key *****");
+            if (e.getSQLState().equals("23505")) System.out.println("*****the brand name already exist*****");
+            if (e.getSQLState().equals("23503")) System.out.println("*****the brand used for a foreign key *****");
             else e.printStackTrace();
         }
     }
@@ -48,8 +48,8 @@ public class BrandRepositoryImpl implements BrandRepository {
             prs.close();
 
         } catch (SQLException e) {
-            if(e.getSQLState().equals("23505")) System.out.println("*****the brand name already exist*****");
-            if(e.getSQLState().equals("23503")) System.out.println("*****the brand used for a foreign key *****");
+            if (e.getSQLState().equals("23505")) System.out.println("*****the brand name already exist*****");
+            if (e.getSQLState().equals("23503")) System.out.println("*****the brand used for a foreign key *****");
             else e.printStackTrace();
         }
     }
@@ -121,11 +121,11 @@ public class BrandRepositoryImpl implements BrandRepository {
             prs.setString(1, brand.getName());
             prs.setString(2, brand.getWebsite());
             prs.setString(3, brand.getDescription());
-            prs.setInt(4,id);
+            prs.setInt(4, id);
             prs.executeUpdate();
         } catch (SQLException e) {
-            if(e.getSQLState().equals("23505")) System.out.println("*****the brand name already exist*****");
-            if(e.getSQLState().equals("23503")) System.out.println("*****the brand used for a foreign key *****");
+            if (e.getSQLState().equals("23505")) System.out.println("*****the brand name already exist*****");
+            if (e.getSQLState().equals("23503")) System.out.println("*****the brand used for a foreign key *****");
             else e.printStackTrace();
         }
     }
@@ -142,8 +142,8 @@ public class BrandRepositoryImpl implements BrandRepository {
             }
 
         } catch (SQLException e) {
-            if(e.getSQLState().equals("23505")) System.out.println("*****the brand name already exist*****");
-            if(e.getSQLState().equals("23503")) System.out.println("*****the brand used for a foreign key *****");
+            if (e.getSQLState().equals("23505")) System.out.println("*****the brand name already exist*****");
+            if (e.getSQLState().equals("23503")) System.out.println("*****the brand used for a foreign key *****");
             else e.printStackTrace();
         }
         return false;

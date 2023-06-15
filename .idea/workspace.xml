@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c2f47ccd-e366-44fb-a5d4-0f0c0ae09a74" name="Changes" comment="add console color class" />
+    <list default="true" id="c2f47ccd-e366-44fb-a5d4-0f0c0ae09a74" name="Changes" comment="some changes color in ui" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -80,21 +80,7 @@
       <workItem from="1686572048419" duration="7584000" />
       <workItem from="1686584872952" duration="19676000" />
       <workItem from="1686661327878" duration="4322000" />
-      <workItem from="1686728882323" duration="53569000" />
-    </task>
-    <task id="LOCAL-00008" summary="add postgres dependency">
-      <created>1686574821311</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1686574821311</updated>
-    </task>
-    <task id="LOCAL-00009" summary="add application and secutity context">
-      <created>1686583765471</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1686583765471</updated>
+      <workItem from="1686728882323" duration="53974000" />
     </task>
     <task id="LOCAL-00010" summary="add user service and repository">
       <created>1686583799352</created>
@@ -425,7 +411,21 @@
       <option name="project" value="LOCAL" />
       <updated>1686801783281</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="some really unnecessary changes">
+      <created>1686802222160</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1686802222160</updated>
+    </task>
+    <task id="LOCAL-00058" summary="some changes color in ui">
+      <created>1686802266766</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1686802266766</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -454,8 +454,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add brand service interface" />
-    <MESSAGE value="add category service interface" />
     <MESSAGE value="add product service interface" />
     <MESSAGE value="add shareholderbrand service interface" />
     <MESSAGE value="add shareholder service interface" />
@@ -479,7 +477,9 @@
     <MESSAGE value="fix some bugs" />
     <MESSAGE value="change the console view" />
     <MESSAGE value="add console color class" />
-    <option name="LAST_COMMIT_MESSAGE" value="add console color class" />
+    <MESSAGE value="some really unnecessary changes" />
+    <MESSAGE value="some changes color in ui" />
+    <option name="LAST_COMMIT_MESSAGE" value="some changes color in ui" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

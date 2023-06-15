@@ -14,7 +14,7 @@ public class ShareHolderMenu {
 
     public static void shareHolderRun() {
         int choice;
-        System.out.println(ConsoleColor.PURPLE_BOLD_BRIGHT+"================");
+        System.out.println(ConsoleColor.PURPLE_BOLD_BRIGHT + "================");
         System.out.println("Options:");
         System.out.println("1. add shareHolder");
         System.out.println("2. delete shareHolder");
@@ -84,12 +84,12 @@ public class ShareHolderMenu {
         System.out.print("enter the shareholder national code :");
         String nationalCode = scanner.next();
         Shareholder shareholder = new Shareholder(name, phoneNumber, nationalCode);
-        if (!Pattern.compile(phonePattern).matcher(phoneNumber).find()){
+        if (!Pattern.compile(phonePattern).matcher(phoneNumber).find()) {
             System.out.println("*****this phone number is not valid it must be 11 digits*****");
             shareHolderRun();
         }
-        if (!Pattern.compile(nationalCodePattern).matcher(nationalCode).find()){
-            System.out.println("*****this national code is not valid it must be 11 digits*****"+ConsoleColor.RESET);
+        if (!Pattern.compile(nationalCodePattern).matcher(nationalCode).find()) {
+            System.out.println("*****this national code is not valid it must be 11 digits*****" + ConsoleColor.RESET);
             shareHolderRun();
         }
         ApplicationContext.getShareHolderService().update(shareholder, shareholderId);

@@ -13,7 +13,7 @@ public class BrandMenu {
 
     public static void brandRun() {
         int choice;
-        System.out.println(ConsoleColor.BLUE_BOLD_BRIGHT+"================");
+        System.out.println(ConsoleColor.BLUE_BOLD_BRIGHT + "================");
         System.out.println("Options:");
         System.out.println("1. add brand");
         System.out.println("2. delete brand");
@@ -85,7 +85,7 @@ public class BrandMenu {
             ApplicationContext.getBrandService().update(brand, brandId);
             brandRun();
         } else {
-            System.out.println("*****this website address is not valid*****"+ConsoleColor.RESET);
+            System.out.println("*****this website address is not valid*****" + ConsoleColor.RESET);
             brandRun();
         }
     }

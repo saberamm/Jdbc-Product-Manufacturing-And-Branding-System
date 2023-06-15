@@ -12,7 +12,7 @@ import static com.Investment_system.ui.menus.UserMenu.scanner;
 public class CategoryMenu {
     public static void categoryRun() {
         int choice;
-        System.out.println(ConsoleColor.YELLOW_BOLD_BRIGHT+"================");
+        System.out.println(ConsoleColor.YELLOW_BOLD_BRIGHT + "================");
         System.out.println("Options:");
         System.out.println("1. add category");
         System.out.println("2. delete category");
@@ -67,7 +67,7 @@ public class CategoryMenu {
         int categoryId = scanner.nextInt();
         System.out.print("enter the category name :");
         String name = scanner.next();
-        System.out.print("enter the category description :"+ConsoleColor.RESET);
+        System.out.print("enter the category description :" + ConsoleColor.RESET);
         String description = scanner.next();
         Category category = new Category(name, description);
         ApplicationContext.getCategoryService().update(category, categoryId);

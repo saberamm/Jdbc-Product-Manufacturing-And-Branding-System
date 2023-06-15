@@ -53,6 +53,7 @@ public class ApplicationContext {
         categoryRepository = new CategoryRepositoryImpl(connection);
         categoryService = new CategoryServiceImpl(categoryRepository);
     }
+
     //------------------shareholder-----------------------------
     private static ShareHolderRepository shareHolderRepository;
     private static ShareHolderService shareHolderService;
@@ -65,6 +66,7 @@ public class ApplicationContext {
         shareHolderRepository = new ShareHolderRepositoryImpl(connection);
         shareHolderService = new ShareHolderServiceImpl(shareHolderRepository);
     }
+
     //--------------------product-------------------------------
     private static ProductRepository productRepository;
     private static ProductService productService;
@@ -77,6 +79,7 @@ public class ApplicationContext {
         productRepository = new ProductRepositoryImpl(connection);
         productService = new ProductServiceImpl(productRepository);
     }
+
     //-------------------shareholder-brand-------------------------
     private static ShareHolderBrandRepository shareHolderBrandRepository;
     private static ShareHolderBrandService shareHolderBrandService;

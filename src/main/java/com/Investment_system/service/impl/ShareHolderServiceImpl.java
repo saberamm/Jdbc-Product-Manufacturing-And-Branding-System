@@ -22,7 +22,7 @@ public class ShareHolderServiceImpl implements ShareHolderService {
 
     @Override
     public void delete(int id) {
-shareHolderRepository.delete(id);
+        shareHolderRepository.delete(id);
     }
 
     @Override

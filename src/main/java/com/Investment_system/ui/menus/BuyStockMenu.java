@@ -11,7 +11,7 @@ public class BuyStockMenu {
 
     public static void buyStockRun() {
         int choice;
-        System.out.println(ConsoleColor.RED_BOLD_BRIGHT+"================");
+        System.out.println(ConsoleColor.RED_BOLD_BRIGHT + "================");
         System.out.println("Options:");
         System.out.println("1. buy stock");
         System.out.println("2. sales stock");
@@ -47,13 +47,13 @@ public class BuyStockMenu {
             System.out.println(brand);
         }
         System.out.println("choose brand id");
-        int brandId=scanner.nextInt();
-        ApplicationContext.getShareHolderBrandService().add(shareHolderId,brandId);
+        int brandId = scanner.nextInt();
+        ApplicationContext.getShareHolderBrandService().add(shareHolderId, brandId);
         buyStockRun();
     }
 
     private static void saleStock() {
-        System.out.print("please enter the stock id :"+ConsoleColor.RESET);
+        System.out.print("please enter the stock id :" + ConsoleColor.RESET);
         int stockId = scanner.nextInt();
         ApplicationContext.getShareHolderBrandService().delete(stockId);
         buyStockRun();

@@ -7,9 +7,11 @@ import java.sql.*;
 
 public class ProductRepositoryImpl implements ProductRepository {
     Connection connection;
+
     public ProductRepositoryImpl(Connection connection) {
         this.connection = connection;
     }
+
     @Override
     public void add(Product product) {
         String sql = "INSERT INTO product (name , create_date,category_id,brand_id) VALUES (? , ? , ? , ?) ";
@@ -55,9 +57,9 @@ public class ProductRepositoryImpl implements ProductRepository {
             PreparedStatement prs = connection.prepareStatement("update product set name = ?,create_date =?,category_id =?,brand_id =? where product_id = ? ");
             prs.setString(1, product.getName());
             prs.setDate(2, product.getCreate_date());
-            prs.setInt(3,product.getCategory_id());
-            prs.setInt(4,product.getBrand_id());
-            prs.setInt(5,id);
+            prs.setInt(3, product.getCategory_id());
+            prs.setInt(4, product.getBrand_id());
+            prs.setInt(5, id);
             prs.executeUpdate();
         } catch (SQLException e) {
             throw new RuntimeException(e);

@@ -12,7 +12,7 @@ import static com.Investment_system.ui.menus.UserMenu.scanner;
 public class ProductMenu {
     public static void productRun() {
         int choice;
-        System.out.println(ConsoleColor.GREEN_BOLD_BRIGHT+"================");
+        System.out.println(ConsoleColor.GREEN_BOLD_BRIGHT + "================");
         System.out.println("Options:");
         System.out.println("1. add product");
         System.out.println("2. delete product");
@@ -41,18 +41,18 @@ public class ProductMenu {
     }
 
     private static void addProduct() {
-        if(!ApplicationContext.getCategoryService().isAnyCategoryExist()){
+        if (!ApplicationContext.getCategoryService().isAnyCategoryExist()) {
             System.out.println("you dont have any category add one");
             productRun();
         }
-        if(!ApplicationContext.getBrandService().isAnyBrandExist()){
+        if (!ApplicationContext.getBrandService().isAnyBrandExist()) {
             System.out.println("you dont have any brand add one ");
             productRun();
         }
         Category[] categoryList = ApplicationContext.getCategoryService().loadAll();
         Brand[] brandList = ApplicationContext.getBrandService().loadAll();
         System.out.println("enter product name :");
-        String name=scanner.next();
+        String name = scanner.next();
         for (Category category : categoryList) {
             System.out.println(category);
         }
@@ -64,9 +64,9 @@ public class ProductMenu {
         }
         System.out.println("choose brand id :");
         int brandId = scanner.nextInt();
-        long millis=System.currentTimeMillis();
-        java.sql.Date date=new java.sql.Date(millis);
-        Product product = new Product(name,date,categoryId,brandId);
+        long millis = System.currentTimeMillis();
+        java.sql.Date date = new java.sql.Date(millis);
+        Product product = new Product(name, date, categoryId, brandId);
         ApplicationContext.getProductService().add(product);
         productRun();
     }
@@ -85,11 +85,11 @@ public class ProductMenu {
         String name = scanner.next();
         System.out.print("enter the category id :");
         int categoryId = scanner.nextInt();
-        System.out.print("enter the brand id :"+ConsoleColor.RESET);
+        System.out.print("enter the brand id :" + ConsoleColor.RESET);
         int brandId = scanner.nextInt();
-        long millis=System.currentTimeMillis();
-        java.sql.Date date=new java.sql.Date(millis);
-        Product product = new Product(name,date,categoryId,brandId );
+        long millis = System.currentTimeMillis();
+        java.sql.Date date = new java.sql.Date(millis);
+        Product product = new Product(name, date, categoryId, brandId);
         ApplicationContext.getProductService().update(product, productId);
         productRun();
     }

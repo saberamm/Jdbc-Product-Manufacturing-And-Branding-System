@@ -28,8 +28,8 @@ public class CategoryRepositoryImpl implements CategoryRepository {
             prs.close();
 
         } catch (SQLException e) {
-            if(e.getSQLState().equals("23505")) System.out.println("*****the category name already exist*****");
-            if(e.getSQLState().equals("23503")) System.out.println("*****the category used for a foreign key *****");
+            if (e.getSQLState().equals("23505")) System.out.println("*****the category name already exist*****");
+            if (e.getSQLState().equals("23503")) System.out.println("*****the category used for a foreign key *****");
             else e.printStackTrace();
         }
     }
@@ -47,8 +47,8 @@ public class CategoryRepositoryImpl implements CategoryRepository {
             prs.close();
 
         } catch (SQLException e) {
-            if(e.getSQLState().equals("23505")) System.out.println("*****the category name already exist*****");
-            if(e.getSQLState().equals("23503")) System.out.println("*****the category used for a foreign key *****");
+            if (e.getSQLState().equals("23505")) System.out.println("*****the category name already exist*****");
+            if (e.getSQLState().equals("23503")) System.out.println("*****the category used for a foreign key *****");
             else e.printStackTrace();
         }
     }
@@ -117,11 +117,11 @@ public class CategoryRepositoryImpl implements CategoryRepository {
             PreparedStatement prs = connection.prepareStatement("update category_table set name = ?,description =? where category_id = ? ");
             prs.setString(1, category.getName());
             prs.setString(2, category.getDescription());
-            prs.setInt(3,id);
+            prs.setInt(3, id);
             prs.executeUpdate();
         } catch (SQLException e) {
-            if(e.getSQLState().equals("23505")) System.out.println("*****the category name already exist*****");
-            if(e.getSQLState().equals("23503")) System.out.println("*****the category used for a foreign key *****");
+            if (e.getSQLState().equals("23505")) System.out.println("*****the category name already exist*****");
+            if (e.getSQLState().equals("23503")) System.out.println("*****the category used for a foreign key *****");
             else e.printStackTrace();
         }
     }
