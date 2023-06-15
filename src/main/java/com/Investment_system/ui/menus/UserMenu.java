@@ -29,10 +29,10 @@ public class UserMenu {
 
             case 0:
                 System.out.println("Exiting the program. Goodbye!");
-                break;
+                System.exit(0);
 
             default:
-                System.out.println("Invalid choice. Please try again.");
+                System.out.println("*****Invalid choice. Please try again*****");
                 UserRun();
         }
 
@@ -52,7 +52,7 @@ public class UserMenu {
             System.out.println("You have logged in!");
             UserMenu.editMenu();
         } else {
-            System.out.println("Username or password is wrong.");
+            System.out.println("*****Username or password is wrong*****");
             UserMenu.UserSigning();
         }
 
@@ -76,12 +76,23 @@ public class UserMenu {
         user.setEmail(email);
         user.setPassword(password);
         if (user.getEmail().matches(email_pattern) && user.getPassword().matches(pass_pattern)) {
+            if (ApplicationContext.getUserService().isUserNameExist(user.getUser_name())) {
+                System.out.println("Error : User Name is NOT Available!*****");
+                UserRun();
+            }
+            if (ApplicationContext.getUserService().isEmailExist(user.getEmail())) {
+                System.out.println("*****Error : Email is NOT Available!*****");
+                UserRun();
+            } else {
+                ApplicationContext.getUserService().add(user);
+                editMenu();
+            }
             ApplicationContext.getUserService().add(user);
             SecurityContext.user_id = user.getUser_id();
             SecurityContext.user_name = user.getUser_name();
         } else {
-            System.out.println("your email or password(use 8 char and upper and lower and symbol) not correct");
-            UserSigning();
+            System.out.println("*****your email or password(use 8 char and upper and lower and symbol) not correct*****");
+            UserRun();
         }
     }
 
@@ -104,7 +115,7 @@ public class UserMenu {
                 BrandMenu.brandRun();
 
             case 2:
-                UserSigning();
+                CategoryMenu.categoryRun();
 
             case 3:
                 UserSigning();
@@ -118,7 +129,7 @@ public class UserMenu {
             case 0:
                 UserRun();
             default:
-                System.out.println("Invalid choice. Please try again.");
+                System.out.println("*****Invalid choice. Please try again*****");
                 editMenu();
         }
     }

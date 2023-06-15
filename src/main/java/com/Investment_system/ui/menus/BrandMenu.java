@@ -35,7 +35,7 @@ public class BrandMenu {
             case 0:
                 UserMenu.editMenu();
             default:
-                System.out.println("Invalid choice. Please try again.");
+                System.out.println("*****Invalid choice. Please try again*****");
                 brandRun();
         }
     }
@@ -49,14 +49,14 @@ public class BrandMenu {
         String description = scanner.next();
         Brand brand = new Brand(name, website, description);
         if (ApplicationContext.getBrandService().isBrandExist(name)) {
-            System.out.println("brand name is already exist you should use another name");
+            System.out.println("*****brand name is already exist you should use another name*****");
             brandRun();
         } else {
             if (Pattern.compile(webPattern).matcher(website).find()) {
                 ApplicationContext.getBrandService().add(brand);
                 brandRun();
             } else {
-                System.out.println("this website address is not valid");
+                System.out.println("*****this website address is not valid*****");
                 brandRun();
             }
         }
@@ -64,7 +64,7 @@ public class BrandMenu {
 
 
     public static void deleteBrand() {
-        System.out.print("please enter the brand id");
+        System.out.print("please enter the brand id :");
         int brandId = scanner.nextInt();
         ApplicationContext.getBrandService().delete(brandId);
         brandRun();
@@ -84,7 +84,7 @@ public class BrandMenu {
             ApplicationContext.getBrandService().update(brand, brandId);
             brandRun();
         } else {
-            System.out.println("this website address is not valid");
+            System.out.println("*****this website address is not valid*****");
             brandRun();
         }
     }

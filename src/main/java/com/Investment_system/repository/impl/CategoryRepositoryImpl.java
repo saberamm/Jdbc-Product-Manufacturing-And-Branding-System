@@ -28,7 +28,8 @@ public class CategoryRepositoryImpl implements CategoryRepository {
             prs.close();
 
         } catch (SQLException e) {
-            e.printStackTrace();
+            if(e.getSQLState().equals("23505")) System.out.println("*****the category name already exist*****");
+            else e.printStackTrace();
         }
     }
 
@@ -118,7 +119,8 @@ public class CategoryRepositoryImpl implements CategoryRepository {
             prs.executeUpdate();
             connection.close();
         } catch (SQLException e) {
-            throw new RuntimeException(e);
+            if(e.getSQLState().equals("23505")) System.out.println("*****the category name already exist*****");
+            else e.printStackTrace();
         }
     }
 

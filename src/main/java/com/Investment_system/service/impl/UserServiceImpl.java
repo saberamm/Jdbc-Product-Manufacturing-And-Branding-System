@@ -14,17 +14,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public void add(User user) {
-        if (isUserNameExist(user.getUser_name())) {
-            System.out.println("Error : User Name is NOT Available!");
-            UserMenu.UserRun();
-        }
-        if (isEmailExist(user.getEmail())) {
-            System.out.println("Error : Email is NOT Available!");
-            UserMenu.UserRun();
-        } else {
-            userRepository.add(user);
-            UserMenu.editMenu();
-        }
+       userRepository.add(user);
     }
 
     @Override
