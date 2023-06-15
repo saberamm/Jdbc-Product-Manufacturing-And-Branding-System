@@ -12,7 +12,10 @@ public class UserMenu {
 
     public static void UserRun() {
         int choice;
-        System.out.println(ConsoleColor.BLUE+"================"+ConsoleColor.RESET);
+        System.out.println(ConsoleColor.BLUE_BOLD_BRIGHT+"========="+ConsoleColor.RESET+
+                ConsoleColor.RED_BOLD_BRIGHT+"========="+ConsoleColor.RESET+
+                ConsoleColor.YELLOW_BOLD+"========="+ConsoleColor.RESET+
+                ConsoleColor.PURPLE_BOLD+"========="+ConsoleColor.RESET);
         System.out.println(ConsoleColor.YELLOW_BOLD_BRIGHT+"hi , welcome :))");
         System.out.println("Options:"+ConsoleColor.RESET);
         System.out.println(ConsoleColor.GREEN+"1. signing"+ConsoleColor.RESET);
