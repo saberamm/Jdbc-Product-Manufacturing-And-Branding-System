@@ -47,7 +47,9 @@ public class CategoryRepositoryImpl implements CategoryRepository {
             prs.close();
 
         } catch (SQLException e) {
-            e.printStackTrace();
+            if(e.getSQLState().equals("23505")) System.out.println("*****the category name already exist*****");
+            if(e.getSQLState().equals("23503")) System.out.println("*****the category used for a foreign key *****");
+            else e.printStackTrace();
         }
     }
 

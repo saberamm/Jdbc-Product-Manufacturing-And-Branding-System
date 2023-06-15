@@ -4,16 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c2f47ccd-e366-44fb-a5d4-0f0c0ae09a74" name="Changes" comment="fix connection bugs">
+    <list default="true" id="c2f47ccd-e366-44fb-a5d4-0f0c0ae09a74" name="Changes" comment="add meta and xml files">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/Investment_system/repository/impl/BrandRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Investment_system/repository/impl/BrandRepositoryImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/Investment_system/repository/impl/CategoryRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Investment_system/repository/impl/CategoryRepositoryImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/Investment_system/repository/impl/ShareHolderBrandRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Investment_system/repository/impl/ShareHolderBrandRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Investment_system/ui/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Investment_system/ui/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Investment_system/ui/menus/BuyStockMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Investment_system/ui/menus/BuyStockMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Investment_system/ui/menus/ProductMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Investment_system/ui/menus/ProductMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Investment_system/ui/menus/ShareHolderMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Investment_system/ui/menus/ShareHolderMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Investment_system/ui/menus/UserMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Investment_system/ui/menus/UserMenu.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,21 +85,7 @@
       <workItem from="1686572048419" duration="7584000" />
       <workItem from="1686584872952" duration="19676000" />
       <workItem from="1686661327878" duration="4322000" />
-      <workItem from="1686728882323" duration="49079000" />
-    </task>
-    <task id="LOCAL-00001" summary="create project and maven file">
-      <created>1686479996115</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1686479996115</updated>
-    </task>
-    <task id="LOCAL-00002" summary="rename the project">
-      <created>1686480698664</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1686480698664</updated>
+      <workItem from="1686728882323" duration="50107000" />
     </task>
     <task id="LOCAL-00003" summary="create users table">
       <created>1686483658923</created>
@@ -435,7 +416,21 @@
       <option name="project" value="LOCAL" />
       <updated>1686795152714</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="fix some bugs">
+      <created>1686797407169</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1686797407169</updated>
+    </task>
+    <task id="LOCAL-00051" summary="add meta and xml files">
+      <created>1686797506363</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1686797506363</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -464,8 +459,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add brand repository interface" />
-    <MESSAGE value="add category repository interface" />
     <MESSAGE value="add product repository interface" />
     <MESSAGE value="add shareholderbrand repository interface" />
     <MESSAGE value="add shareholder repository interface" />
@@ -489,7 +482,9 @@
     <MESSAGE value="add buy stock menu" />
     <MESSAGE value="add product menu" />
     <MESSAGE value="fix connection bugs" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix connection bugs" />
+    <MESSAGE value="fix some bugs" />
+    <MESSAGE value="add meta and xml files" />
+    <option name="LAST_COMMIT_MESSAGE" value="add meta and xml files" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
