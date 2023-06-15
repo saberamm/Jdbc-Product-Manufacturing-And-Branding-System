@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c2f47ccd-e366-44fb-a5d4-0f0c0ae09a74" name="Changes" comment="some changes color in ui" />
+    <list default="true" id="c2f47ccd-e366-44fb-a5d4-0f0c0ae09a74" name="Changes" comment="fixing lines">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -80,21 +82,7 @@
       <workItem from="1686572048419" duration="7584000" />
       <workItem from="1686584872952" duration="19676000" />
       <workItem from="1686661327878" duration="4322000" />
-      <workItem from="1686728882323" duration="53974000" />
-    </task>
-    <task id="LOCAL-00010" summary="add user service and repository">
-      <created>1686583799352</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1686583799352</updated>
-    </task>
-    <task id="LOCAL-00011" summary="add main and write methodes for repo and service interface">
-      <created>1686584386913</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1686584386913</updated>
+      <workItem from="1686728882323" duration="54778000" />
     </task>
     <task id="LOCAL-00012" summary="some change in tables name">
       <created>1686585134876</created>
@@ -425,7 +413,21 @@
       <option name="project" value="LOCAL" />
       <updated>1686802266766</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="fixing lines">
+      <created>1686802690754</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1686802690754</updated>
+    </task>
+    <task id="LOCAL-00060" summary="fixing lines">
+      <created>1686803061921</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1686803061921</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -454,7 +456,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add product service interface" />
     <MESSAGE value="add shareholderbrand service interface" />
     <MESSAGE value="add shareholder service interface" />
     <MESSAGE value="add get services methods to application context" />
@@ -479,7 +480,8 @@
     <MESSAGE value="add console color class" />
     <MESSAGE value="some really unnecessary changes" />
     <MESSAGE value="some changes color in ui" />
-    <option name="LAST_COMMIT_MESSAGE" value="some changes color in ui" />
+    <MESSAGE value="fixing lines" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixing lines" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
