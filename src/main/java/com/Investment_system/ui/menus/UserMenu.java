@@ -100,11 +100,11 @@ public class UserMenu {
         int choice;
         System.out.println("================");
         System.out.println("Options:");
-        System.out.println("1.  brand menu");
-        System.out.println("2.  category menu");
-        System.out.println("3.  product menu");
-        System.out.println("4.  shareholder menu");
-        System.out.println("5.  brands stocks menu");
+        System.out.println("1.  brand section");
+        System.out.println("2.  category section");
+        System.out.println("3.  product section");
+        System.out.println("4.  shareholder section");
+        System.out.println("5.  brands stocks section");
         System.out.println("0. back to the main menu");
         System.out.print("Enter your choice: ");
         choice = scanner.nextInt();
@@ -121,7 +121,7 @@ public class UserMenu {
                 UserSigning();
 
             case 4:
-                UserSigning();
+                ShareHolderMenu.shareHolderRun();
 
             case 5:
                 UserSigning();
