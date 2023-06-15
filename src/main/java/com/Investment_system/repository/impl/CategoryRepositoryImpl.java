@@ -78,7 +78,6 @@ public class CategoryRepositoryImpl implements CategoryRepository {
             Category[] categoryList = new Category[rowCounter()];
             PreparedStatement prs = connection.prepareStatement("select * from category_table");
             ResultSet resultSet = prs.executeQuery();
-            connection.close();
             int counter = 0;
             while (resultSet.next()) {
                 categoryList[counter] = new Category(
@@ -117,7 +116,6 @@ public class CategoryRepositoryImpl implements CategoryRepository {
             prs.setString(2, category.getDescription());
             prs.setInt(3,id);
             prs.executeUpdate();
-            connection.close();
         } catch (SQLException e) {
             if(e.getSQLState().equals("23505")) System.out.println("*****the category name already exist*****");
             else e.printStackTrace();

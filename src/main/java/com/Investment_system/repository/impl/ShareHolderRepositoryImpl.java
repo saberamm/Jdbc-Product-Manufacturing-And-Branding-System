@@ -79,7 +79,6 @@ public class ShareHolderRepositoryImpl implements ShareHolderRepository {
             Shareholder[] shareholderList = new Shareholder[rowCounter()];
             PreparedStatement prs = connection.prepareStatement("select * from shareholder");
             ResultSet resultSet = prs.executeQuery();
-            connection.close();
             int counter = 0;
             while (resultSet.next()) {
                 shareholderList[counter] = new Shareholder(
@@ -120,7 +119,6 @@ public class ShareHolderRepositoryImpl implements ShareHolderRepository {
             prs.setString(3, shareholder.getNational_code());
             prs.setInt(4, id);
             prs.executeUpdate();
-            connection.close();
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }

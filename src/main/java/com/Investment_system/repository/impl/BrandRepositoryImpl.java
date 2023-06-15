@@ -80,7 +80,6 @@ public class BrandRepositoryImpl implements BrandRepository {
             Brand[] brandList = new Brand[rowCounter()];
             PreparedStatement prs = connection.prepareStatement("select * from brand");
             ResultSet resultSet = prs.executeQuery();
-            connection.close();
             int counter = 0;
             while (resultSet.next()) {
                 brandList[counter] = new Brand(
@@ -121,7 +120,6 @@ public class BrandRepositoryImpl implements BrandRepository {
             prs.setString(3, brand.getDescription());
             prs.setInt(4,id);
             prs.executeUpdate();
-            connection.close();
         } catch (SQLException e) {
             if(e.getSQLState().equals("23505")) System.out.println("*****the brand name already exist*****");
             else e.printStackTrace();

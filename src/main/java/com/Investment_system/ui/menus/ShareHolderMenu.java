@@ -1,12 +1,16 @@
 package com.Investment_system.ui.menus;
 
-import com.Investment_system.model.Category;
 import com.Investment_system.model.Shareholder;
 import com.Investment_system.util.ApplicationContext;
+
+import java.util.regex.Pattern;
 
 import static com.Investment_system.ui.menus.UserMenu.scanner;
 
 public class ShareHolderMenu {
+    static String phonePattern = "^\\d{11}$";
+    static String nationalCodePattern = "^\\d{10}$";
+
     public static void shareHolderRun() {
         int choice;
         System.out.println("================");
@@ -44,14 +48,22 @@ public class ShareHolderMenu {
         String phoneNumber = scanner.next();
         System.out.print("enter the shareholder national code :");
         String nationalCode = scanner.next();
-        Shareholder shareholder = new Shareholder(name, phoneNumber,nationalCode);
-        if (ApplicationContext.getShareHolderService().isShareholderExist(nationalCode)) {
-            System.out.println("*****shareholder national code is already exist*****");
-            shareHolderRun();
-        } else {
-            ApplicationContext.getShareHolderService().add(shareholder);
+        Shareholder shareholder = new Shareholder(name, phoneNumber, nationalCode);
+        if (!Pattern.compile(phonePattern).matcher(phoneNumber).find()){
+            System.out.println("*****this phone number is not valid it must be 11 digits*****");
             shareHolderRun();
         }
+        if (!Pattern.compile(nationalCodePattern).matcher(nationalCode).find()){
+            System.out.println("*****this national code is not valid it must be 11 digits*****");
+            shareHolderRun();
+        }
+            if (ApplicationContext.getShareHolderService().isShareholderExist(nationalCode)) {
+                System.out.println("*****shareholder national code is already exist*****");
+                shareHolderRun();
+            } else {
+                ApplicationContext.getShareHolderService().add(shareholder);
+                shareHolderRun();
+            }
     }
 
     private static void deleteShareHolder() {
@@ -70,7 +82,7 @@ public class ShareHolderMenu {
         String phoneNumber = scanner.next();
         System.out.print("enter the shareholder national code :");
         String nationalCode = scanner.next();
-        Shareholder shareholder = new Shareholder(name, phoneNumber,nationalCode);
+        Shareholder shareholder = new Shareholder(name, phoneNumber, nationalCode);
         ApplicationContext.getShareHolderService().update(shareholder, shareholderId);
         shareHolderRun();
     }

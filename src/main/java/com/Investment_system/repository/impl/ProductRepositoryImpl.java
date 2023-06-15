@@ -59,7 +59,6 @@ public class ProductRepositoryImpl implements ProductRepository {
             prs.setInt(4,product.getBrand_id());
             prs.setInt(5,id);
             prs.executeUpdate();
-            connection.close();
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
