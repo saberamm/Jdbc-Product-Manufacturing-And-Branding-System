@@ -118,13 +118,13 @@ public class UserMenu {
                 CategoryMenu.categoryRun();
 
             case 3:
-                UserSigning();
+                ProductMenu.productRun();
 
             case 4:
                 ShareHolderMenu.shareHolderRun();
 
             case 5:
-                UserSigning();
+                BuyStockMenu.buyStockRun();
 
             case 0:
                 UserRun();

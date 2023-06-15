@@ -49,21 +49,21 @@ public class ShareHolderMenu {
         System.out.print("enter the shareholder national code :");
         String nationalCode = scanner.next();
         Shareholder shareholder = new Shareholder(name, phoneNumber, nationalCode);
-        if (!Pattern.compile(phonePattern).matcher(phoneNumber).find()){
+        if (!Pattern.compile(phonePattern).matcher(phoneNumber).find()) {
             System.out.println("*****this phone number is not valid it must be 11 digits*****");
             shareHolderRun();
         }
-        if (!Pattern.compile(nationalCodePattern).matcher(nationalCode).find()){
+        if (!Pattern.compile(nationalCodePattern).matcher(nationalCode).find()) {
             System.out.println("*****this national code is not valid it must be 11 digits*****");
             shareHolderRun();
         }
-            if (ApplicationContext.getShareHolderService().isShareholderExist(nationalCode)) {
-                System.out.println("*****shareholder national code is already exist*****");
-                shareHolderRun();
-            } else {
-                ApplicationContext.getShareHolderService().add(shareholder);
-                shareHolderRun();
-            }
+        if (ApplicationContext.getShareHolderService().isShareholderExist(nationalCode)) {
+            System.out.println("*****shareholder national code is already exist*****");
+            shareHolderRun();
+        } else {
+            ApplicationContext.getShareHolderService().add(shareholder);
+            shareHolderRun();
+        }
     }
 
     private static void deleteShareHolder() {
@@ -83,6 +83,14 @@ public class ShareHolderMenu {
         System.out.print("enter the shareholder national code :");
         String nationalCode = scanner.next();
         Shareholder shareholder = new Shareholder(name, phoneNumber, nationalCode);
+        if (!Pattern.compile(phonePattern).matcher(phoneNumber).find()){
+            System.out.println("*****this phone number is not valid it must be 11 digits*****");
+            shareHolderRun();
+        }
+        if (!Pattern.compile(nationalCodePattern).matcher(nationalCode).find()){
+            System.out.println("*****this national code is not valid it must be 11 digits*****");
+            shareHolderRun();
+        }
         ApplicationContext.getShareHolderService().update(shareholder, shareholderId);
         shareHolderRun();
     }

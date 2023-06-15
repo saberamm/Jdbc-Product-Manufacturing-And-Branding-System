@@ -29,6 +29,7 @@ public class CategoryRepositoryImpl implements CategoryRepository {
 
         } catch (SQLException e) {
             if(e.getSQLState().equals("23505")) System.out.println("*****the category name already exist*****");
+            if(e.getSQLState().equals("23503")) System.out.println("*****the category used for a foreign key *****");
             else e.printStackTrace();
         }
     }
@@ -118,6 +119,7 @@ public class CategoryRepositoryImpl implements CategoryRepository {
             prs.executeUpdate();
         } catch (SQLException e) {
             if(e.getSQLState().equals("23505")) System.out.println("*****the category name already exist*****");
+            if(e.getSQLState().equals("23503")) System.out.println("*****the category used for a foreign key *****");
             else e.printStackTrace();
         }
     }

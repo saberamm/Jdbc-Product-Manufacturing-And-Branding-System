@@ -37,15 +37,15 @@ public class BuyStockMenu {
     private static void buyStock() {
         Shareholder[] shareholdersList = ApplicationContext.getShareHolderService().loadAll();
         Brand[] brandList = ApplicationContext.getBrandService().loadAll();
-        System.out.println("choose share holder id");
         for (Shareholder shareholder : shareholdersList) {
             System.out.println(shareholder);
         }
+        System.out.println("choose share holder id");
         int shareHolderId = scanner.nextInt();
-        System.out.println("choose brand id");
         for (Brand brand : brandList) {
             System.out.println(brand);
         }
+        System.out.println("choose brand id");
         int brandId=scanner.nextInt();
         ApplicationContext.getShareHolderBrandService().add(shareHolderId,brandId);
         buyStockRun();

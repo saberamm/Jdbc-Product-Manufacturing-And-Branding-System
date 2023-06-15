@@ -40,24 +40,33 @@ public class ProductMenu {
     }
 
     private static void addProduct() {
-        System.out.println("enter product name");
-        String name=scanner.next();
+        if(!ApplicationContext.getCategoryService().isAnyCategoryExist()){
+            System.out.println("you dont have any category add one");
+            productRun();
+        }
+        if(!ApplicationContext.getBrandService().isAnyBrandExist()){
+            System.out.println("you dont have any brand add one ");
+            productRun();
+        }
         Category[] categoryList = ApplicationContext.getCategoryService().loadAll();
         Brand[] brandList = ApplicationContext.getBrandService().loadAll();
-        System.out.println("choose category id");
+        System.out.println("enter product name :");
+        String name=scanner.next();
         for (Category category : categoryList) {
             System.out.println(category);
         }
+        System.out.println("choose category id :");
         int categoryId = scanner.nextInt();
 
-        System.out.println("choose brand id");
         for (Brand brand : brandList) {
             System.out.println(brand);
         }
+        System.out.println("choose brand id :");
         int brandId = scanner.nextInt();
         long millis=System.currentTimeMillis();
         java.sql.Date date=new java.sql.Date(millis);
         Product product = new Product(name,date,categoryId,brandId);
+        ApplicationContext.getProductService().add(product);
         productRun();
     }
 
