@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c2f47ccd-e366-44fb-a5d4-0f0c0ae09a74" name="Changes" comment="fix some bugs" />
+    <list default="true" id="c2f47ccd-e366-44fb-a5d4-0f0c0ae09a74" name="Changes" comment="fix some bugs">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Investment_system/ui/menus/BrandMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Investment_system/ui/menus/BrandMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Investment_system/ui/menus/BuyStockMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Investment_system/ui/menus/BuyStockMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Investment_system/ui/menus/CategoryMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Investment_system/ui/menus/CategoryMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Investment_system/ui/menus/ProductMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Investment_system/ui/menus/ProductMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Investment_system/ui/menus/ShareHolderMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Investment_system/ui/menus/ShareHolderMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Investment_system/ui/menus/UserMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Investment_system/ui/menus/UserMenu.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -80,14 +88,7 @@
       <workItem from="1686572048419" duration="7584000" />
       <workItem from="1686584872952" duration="19676000" />
       <workItem from="1686661327878" duration="4322000" />
-      <workItem from="1686728882323" duration="51605000" />
-    </task>
-    <task id="LOCAL-00005" summary="create shareholder and product and shareholder_brand tables">
-      <created>1686486968578</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1686486968578</updated>
+      <workItem from="1686728882323" duration="53221000" />
     </task>
     <task id="LOCAL-00006" summary="add connection">
       <created>1686573065182</created>
@@ -425,7 +426,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686799855683</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="fix some bugs">
+      <created>1686800319526</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1686800319526</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

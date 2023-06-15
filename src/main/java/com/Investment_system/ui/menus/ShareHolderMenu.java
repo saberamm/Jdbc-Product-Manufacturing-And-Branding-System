@@ -1,6 +1,7 @@
 package com.Investment_system.ui.menus;
 
 import com.Investment_system.model.Shareholder;
+import com.Investment_system.ui.color.ConsoleColor;
 import com.Investment_system.util.ApplicationContext;
 
 import java.util.regex.Pattern;
@@ -13,7 +14,7 @@ public class ShareHolderMenu {
 
     public static void shareHolderRun() {
         int choice;
-        System.out.println("================");
+        System.out.println(ConsoleColor.PURPLE_BOLD_BRIGHT+"================");
         System.out.println("Options:");
         System.out.println("1. add shareHolder");
         System.out.println("2. delete shareHolder");
@@ -88,7 +89,7 @@ public class ShareHolderMenu {
             shareHolderRun();
         }
         if (!Pattern.compile(nationalCodePattern).matcher(nationalCode).find()){
-            System.out.println("*****this national code is not valid it must be 11 digits*****");
+            System.out.println("*****this national code is not valid it must be 11 digits*****"+ConsoleColor.RESET);
             shareHolderRun();
         }
         ApplicationContext.getShareHolderService().update(shareholder, shareholderId);

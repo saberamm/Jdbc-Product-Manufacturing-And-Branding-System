@@ -2,6 +2,7 @@ package com.Investment_system.ui.menus;
 
 import com.Investment_system.model.Brand;
 import com.Investment_system.model.Shareholder;
+import com.Investment_system.ui.color.ConsoleColor;
 import com.Investment_system.util.ApplicationContext;
 
 import static com.Investment_system.ui.menus.UserMenu.scanner;
@@ -10,7 +11,7 @@ public class BuyStockMenu {
 
     public static void buyStockRun() {
         int choice;
-        System.out.println("================");
+        System.out.println(ConsoleColor.RED_BOLD_BRIGHT+"================");
         System.out.println("Options:");
         System.out.println("1. buy stock");
         System.out.println("2. sales stock");
@@ -52,7 +53,7 @@ public class BuyStockMenu {
     }
 
     private static void saleStock() {
-        System.out.print("please enter the stock id :");
+        System.out.print("please enter the stock id :"+ConsoleColor.RESET);
         int stockId = scanner.nextInt();
         ApplicationContext.getShareHolderBrandService().delete(stockId);
         buyStockRun();

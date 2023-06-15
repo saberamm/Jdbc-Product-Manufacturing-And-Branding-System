@@ -1,6 +1,7 @@
 package com.Investment_system.ui.menus;
 
 import com.Investment_system.model.User;
+import com.Investment_system.ui.color.ConsoleColor;
 import com.Investment_system.util.ApplicationContext;
 import com.Investment_system.util.SecurityContext;
 
@@ -11,13 +12,13 @@ public class UserMenu {
 
     public static void UserRun() {
         int choice;
-        System.out.println("================");
-        System.out.println("hi , welcome :))");
-        System.out.println("Options:");
-        System.out.println("1. signing");
-        System.out.println("2. signup");
-        System.out.println("0. Exit");
-        System.out.print("Enter your choice: ");
+        System.out.println(ConsoleColor.BLUE+"================"+ConsoleColor.RESET);
+        System.out.println(ConsoleColor.YELLOW_BOLD_BRIGHT+"hi , welcome :))");
+        System.out.println("Options:"+ConsoleColor.RESET);
+        System.out.println(ConsoleColor.GREEN+"1. signing"+ConsoleColor.RESET);
+        System.out.println(ConsoleColor.BLUE+"2. signup"+ConsoleColor.RESET);
+        System.out.println(ConsoleColor.RED+"0. Exit"+ConsoleColor.RESET);
+        System.out.print(ConsoleColor.PURPLE+"Enter your choice: ");
         choice = scanner.nextInt();
         System.out.println();
 
@@ -130,7 +131,7 @@ public class UserMenu {
             case 0:
                 UserRun();
             default:
-                System.out.println("*****Invalid choice. Please try again*****");
+                System.out.println("*****Invalid choice. Please try again*****"+ConsoleColor.RESET);
                 editMenu();
         }
     }

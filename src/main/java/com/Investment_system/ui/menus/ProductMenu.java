@@ -4,6 +4,7 @@ import com.Investment_system.model.Brand;
 import com.Investment_system.model.Category;
 import com.Investment_system.model.Product;
 import com.Investment_system.model.Shareholder;
+import com.Investment_system.ui.color.ConsoleColor;
 import com.Investment_system.util.ApplicationContext;
 
 import static com.Investment_system.ui.menus.UserMenu.scanner;
@@ -11,7 +12,7 @@ import static com.Investment_system.ui.menus.UserMenu.scanner;
 public class ProductMenu {
     public static void productRun() {
         int choice;
-        System.out.println("================");
+        System.out.println(ConsoleColor.GREEN_BOLD_BRIGHT+"================");
         System.out.println("Options:");
         System.out.println("1. add product");
         System.out.println("2. delete product");
@@ -84,7 +85,7 @@ public class ProductMenu {
         String name = scanner.next();
         System.out.print("enter the category id :");
         int categoryId = scanner.nextInt();
-        System.out.print("enter the brand id :");
+        System.out.print("enter the brand id :"+ConsoleColor.RESET);
         int brandId = scanner.nextInt();
         long millis=System.currentTimeMillis();
         java.sql.Date date=new java.sql.Date(millis);

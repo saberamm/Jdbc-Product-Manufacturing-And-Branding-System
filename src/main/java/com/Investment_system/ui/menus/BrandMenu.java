@@ -1,6 +1,7 @@
 package com.Investment_system.ui.menus;
 
 import com.Investment_system.model.Brand;
+import com.Investment_system.ui.color.ConsoleColor;
 import com.Investment_system.util.ApplicationContext;
 
 import java.util.regex.Pattern;
@@ -12,7 +13,7 @@ public class BrandMenu {
 
     public static void brandRun() {
         int choice;
-        System.out.println("================");
+        System.out.println(ConsoleColor.BLUE_BOLD_BRIGHT+"================");
         System.out.println("Options:");
         System.out.println("1. add brand");
         System.out.println("2. delete brand");
@@ -84,7 +85,7 @@ public class BrandMenu {
             ApplicationContext.getBrandService().update(brand, brandId);
             brandRun();
         } else {
-            System.out.println("*****this website address is not valid*****");
+            System.out.println("*****this website address is not valid*****"+ConsoleColor.RESET);
             brandRun();
         }
     }
