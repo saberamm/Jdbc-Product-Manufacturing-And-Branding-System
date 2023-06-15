@@ -35,7 +35,7 @@ public class ShareHolderBrandRepositoryImpl implements ShareHolderBrandRepositor
         try {
 
             PreparedStatement prs = connection.prepareStatement
-                    ("DELETE FROM shareholder_brand WHERE shareholder_id = ? ");
+                    ("DELETE FROM shareholder_brand WHERE stock_id = ? ");
 
             prs.setLong(1, id);
 

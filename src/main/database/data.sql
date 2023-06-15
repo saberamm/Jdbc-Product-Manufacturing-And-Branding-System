@@ -52,6 +52,7 @@ alter table shareholder owner to postgres;
 ----------------------------
 create table if not exists shareholder_brand
 (
+    stock_id serial primary key not null unique ,
     shareholder_id integer not null constraint shareholder_id references shareholder,
     brand_id integer not null constraint brand_id references brand
 );
