@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c2f47ccd-e366-44fb-a5d4-0f0c0ae09a74" name="Changes" comment="fix exception bugs">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="c2f47ccd-e366-44fb-a5d4-0f0c0ae09a74" name="Changes" comment="fix some bugs" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -82,14 +80,7 @@
       <workItem from="1686572048419" duration="7584000" />
       <workItem from="1686584872952" duration="19676000" />
       <workItem from="1686661327878" duration="4322000" />
-      <workItem from="1686728882323" duration="51168000" />
-    </task>
-    <task id="LOCAL-00004" summary="create brand and category tables">
-      <created>1686485957994</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1686485957994</updated>
+      <workItem from="1686728882323" duration="51605000" />
     </task>
     <task id="LOCAL-00005" summary="create shareholder and product and shareholder_brand tables">
       <created>1686486968578</created>
@@ -427,7 +418,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686798517586</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="fix some bugs">
+      <created>1686799855682</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1686799855683</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -478,10 +476,10 @@
     <MESSAGE value="add buy stock menu" />
     <MESSAGE value="add product menu" />
     <MESSAGE value="fix connection bugs" />
-    <MESSAGE value="fix some bugs" />
     <MESSAGE value="add meta and xml files" />
     <MESSAGE value="fix exception bugs" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix exception bugs" />
+    <MESSAGE value="fix some bugs" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix some bugs" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

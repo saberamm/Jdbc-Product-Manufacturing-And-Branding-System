@@ -12,6 +12,7 @@ public class UserMenu {
     public static void UserRun() {
         int choice;
         System.out.println("================");
+        System.out.println("hi , welcome :))");
         System.out.println("Options:");
         System.out.println("1. signing");
         System.out.println("2. signup");
@@ -28,7 +29,7 @@ public class UserMenu {
                 UserSignup();
 
             case 0:
-                System.out.println("Exiting the program. Goodbye!");
+                System.out.println("Exiting the program. Goodbye :((");
                 System.exit(0);
 
             default:

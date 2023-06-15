@@ -3,7 +3,7 @@
   <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.43">
     <root id="1">
       <DateStyle>ymd</DateStyle>
-      <IntrospectionStateNumber>1604</IntrospectionStateNumber>
+      <IntrospectionStateNumber>1706</IntrospectionStateNumber>
       <ServerVersion>14.7</ServerVersion>
       <StartupTime>1683747940</StartupTime>
       <TimeZones>true ACDT
@@ -802,13 +802,14 @@ false Zulu
 13388||10|C|G
 13388||-9223372036854775808|U|G
 13388||10|U|G</Grants>
-      <IntrospectionStateNumber>1604</IntrospectionStateNumber>
+      <IntrospectionStateNumber>1706</IntrospectionStateNumber>
       <ObjectId>17002</ObjectId>
       <Relations>sequence|table|17003|17004|1
 sequence|table|17016|17017|1
 sequence|table|17025|17026|1
 sequence|table|17034|17035|1
 sequence|table|17051|17052|1
+sequence|table|17073|17060|3
 </Relations>
       <OwnerName>postgres</OwnerName>
     </database>
@@ -4242,7 +4243,7 @@ sequence|table|17051|17052|1
     <schema id="264" parent="2" name="public">
       <Comment>standard public schema</Comment>
       <Current>1</Current>
-      <IntrospectionStateNumber>1604</IntrospectionStateNumber>
+      <IntrospectionStateNumber>1706</IntrospectionStateNumber>
       <ObjectId>2200</ObjectId>
       <StateNumber>527</StateNumber>
       <OwnerName>postgres</OwnerName>
@@ -4265,55 +4266,61 @@ sequence|table|17051|17052|1
       <StateNumber>1598</StateNumber>
       <OwnerName>postgres</OwnerName>
     </sequence>
-    <sequence id="268" parent="264" name="shareholder_shareholder_id_seq">
+    <sequence id="268" parent="264" name="shareholder_brand_stock_id_seq">
+      <DataType>integer|0s</DataType>
+      <ObjectId>17073</ObjectId>
+      <StateNumber>1701</StateNumber>
+      <OwnerName>postgres</OwnerName>
+    </sequence>
+    <sequence id="269" parent="264" name="shareholder_shareholder_id_seq">
       <DataType>integer|0s</DataType>
       <ObjectId>17051</ObjectId>
       <StateNumber>1600</StateNumber>
       <OwnerName>postgres</OwnerName>
     </sequence>
-    <sequence id="269" parent="264" name="user_table_user_id_seq">
+    <sequence id="270" parent="264" name="user_table_user_id_seq">
       <DataType>integer|0s</DataType>
       <ObjectId>17003</ObjectId>
       <StateNumber>1592</StateNumber>
       <OwnerName>postgres</OwnerName>
     </sequence>
-    <table id="270" parent="264" name="brand">
+    <table id="271" parent="264" name="brand">
       <ObjectId>17026</ObjectId>
       <StateNumber>1598</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="271" parent="264" name="category_table">
+    <table id="272" parent="264" name="category_table">
       <ObjectId>17017</ObjectId>
       <StateNumber>1598</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="272" parent="264" name="product">
+    <table id="273" parent="264" name="product">
       <ObjectId>17035</ObjectId>
       <StateNumber>1598</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="273" parent="264" name="shareholder">
+    <table id="274" parent="264" name="shareholder">
       <ObjectId>17052</ObjectId>
       <StateNumber>1602</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="274" parent="264" name="shareholder_brand">
+    <table id="275" parent="264" name="shareholder_brand">
       <ObjectId>17060</ObjectId>
-      <StateNumber>1602</StateNumber>
+      <StateNumber>1701</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="275" parent="264" name="user_table">
+    <table id="276" parent="264" name="user_table">
       <ObjectId>17004</ObjectId>
       <StateNumber>1592</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <column id="276" parent="270" name="brand_id">
+    <column id="277" parent="271" name="brand_id">
       <DataType>integer|0s</DataType>
       <DefaultExpression>nextval(&apos;brand_brand_id_seq&apos;::regclass)</DefaultExpression>
       <NotNull>1</NotNull>
@@ -4321,28 +4328,28 @@ sequence|table|17051|17052|1
       <StateNumber>1596</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="277" parent="270" name="name">
+    <column id="278" parent="271" name="name">
       <DataType>varchar(20)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StateNumber>1596</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="278" parent="270" name="website">
+    <column id="279" parent="271" name="website">
       <DataType>varchar(60)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StateNumber>1596</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="279" parent="270" name="description">
+    <column id="280" parent="271" name="description">
       <DataType>varchar(60)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StateNumber>1596</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="280" parent="270" name="brand_pkey">
+    <index id="281" parent="271" name="brand_pkey">
       <ColNames>brand_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>17030</ObjectId>
@@ -4351,7 +4358,7 @@ sequence|table|17051|17052|1
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <index id="281" parent="270" name="brand_name_key">
+    <index id="282" parent="271" name="brand_name_key">
       <ColNames>name</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>17032</ObjectId>
@@ -4362,20 +4369,20 @@ sequence|table|17051|17052|1
       <CollationIds>100</CollationIds>
       <CollationParentNames>pg_catalog</CollationParentNames>
     </index>
-    <key id="282" parent="270" name="brand_pkey">
+    <key id="283" parent="271" name="brand_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>17031</ObjectId>
       <Primary>1</Primary>
       <StateNumber>1596</StateNumber>
       <UnderlyingIndexId>17030</UnderlyingIndexId>
     </key>
-    <key id="283" parent="270" name="brand_name_key">
+    <key id="284" parent="271" name="brand_name_key">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>17033</ObjectId>
       <StateNumber>1596</StateNumber>
       <UnderlyingIndexId>17032</UnderlyingIndexId>
     </key>
-    <column id="284" parent="271" name="category_id">
+    <column id="285" parent="272" name="category_id">
       <DataType>integer|0s</DataType>
       <DefaultExpression>nextval(&apos;category_table_category_id_seq&apos;::regclass)</DefaultExpression>
       <NotNull>1</NotNull>
@@ -4383,21 +4390,21 @@ sequence|table|17051|17052|1
       <StateNumber>1594</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="285" parent="271" name="name">
+    <column id="286" parent="272" name="name">
       <DataType>varchar(30)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StateNumber>1594</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="286" parent="271" name="description">
+    <column id="287" parent="272" name="description">
       <DataType>varchar(30)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StateNumber>1594</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="287" parent="271" name="category_table_pkey">
+    <index id="288" parent="272" name="category_table_pkey">
       <ColNames>category_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>17021</ObjectId>
@@ -4406,7 +4413,7 @@ sequence|table|17051|17052|1
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <index id="288" parent="271" name="category_table_name_key">
+    <index id="289" parent="272" name="category_table_name_key">
       <ColNames>name</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>17023</ObjectId>
@@ -4417,20 +4424,20 @@ sequence|table|17051|17052|1
       <CollationIds>100</CollationIds>
       <CollationParentNames>pg_catalog</CollationParentNames>
     </index>
-    <key id="289" parent="271" name="category_table_pkey">
+    <key id="290" parent="272" name="category_table_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>17022</ObjectId>
       <Primary>1</Primary>
       <StateNumber>1594</StateNumber>
       <UnderlyingIndexId>17021</UnderlyingIndexId>
     </key>
-    <key id="290" parent="271" name="category_table_name_key">
+    <key id="291" parent="272" name="category_table_name_key">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>17024</ObjectId>
       <StateNumber>1594</StateNumber>
       <UnderlyingIndexId>17023</UnderlyingIndexId>
     </key>
-    <column id="291" parent="272" name="product_id">
+    <column id="292" parent="273" name="product_id">
       <DataType>integer|0s</DataType>
       <DefaultExpression>nextval(&apos;product_product_id_seq&apos;::regclass)</DefaultExpression>
       <NotNull>1</NotNull>
@@ -4438,35 +4445,35 @@ sequence|table|17051|17052|1
       <StateNumber>1598</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="292" parent="272" name="name">
+    <column id="293" parent="273" name="name">
       <DataType>varchar(20)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StateNumber>1598</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="293" parent="272" name="create_date">
+    <column id="294" parent="273" name="create_date">
       <DataType>date|0s</DataType>
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StateNumber>1598</StateNumber>
       <TypeId>1082</TypeId>
     </column>
-    <column id="294" parent="272" name="category_id">
+    <column id="295" parent="273" name="category_id">
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StateNumber>1598</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="295" parent="272" name="brand_id">
+    <column id="296" parent="273" name="brand_id">
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
       <Position>5</Position>
       <StateNumber>1598</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <foreign-key id="296" parent="272" name="category_id">
+    <foreign-key id="297" parent="273" name="category_id">
       <ColNames>category_id</ColNames>
       <ObjectId>17041</ObjectId>
       <RefColNames>category_id</RefColNames>
@@ -4476,7 +4483,7 @@ sequence|table|17051|17052|1
       <RefTableName>category_table</RefTableName>
       <RefTableKind>table</RefTableKind>
     </foreign-key>
-    <foreign-key id="297" parent="272" name="brand_id">
+    <foreign-key id="298" parent="273" name="brand_id">
       <ColNames>brand_id</ColNames>
       <ObjectId>17046</ObjectId>
       <RefColNames>brand_id</RefColNames>
@@ -4486,7 +4493,7 @@ sequence|table|17051|17052|1
       <RefTableName>brand</RefTableName>
       <RefTableKind>table</RefTableKind>
     </foreign-key>
-    <index id="298" parent="272" name="product_pkey">
+    <index id="299" parent="273" name="product_pkey">
       <ColNames>product_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>17039</ObjectId>
@@ -4495,14 +4502,14 @@ sequence|table|17051|17052|1
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="299" parent="272" name="product_pkey">
+    <key id="300" parent="273" name="product_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>17040</ObjectId>
       <Primary>1</Primary>
       <StateNumber>1598</StateNumber>
       <UnderlyingIndexId>17039</UnderlyingIndexId>
     </key>
-    <column id="300" parent="273" name="shareholder_id">
+    <column id="301" parent="274" name="shareholder_id">
       <DataType>integer|0s</DataType>
       <DefaultExpression>nextval(&apos;shareholder_shareholder_id_seq&apos;::regclass)</DefaultExpression>
       <NotNull>1</NotNull>
@@ -4510,28 +4517,28 @@ sequence|table|17051|17052|1
       <StateNumber>1600</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="301" parent="273" name="name">
+    <column id="302" parent="274" name="name">
       <DataType>varchar(20)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StateNumber>1600</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="302" parent="273" name="phone_number">
+    <column id="303" parent="274" name="phone_number">
       <DataType>varchar(11)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StateNumber>1600</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="303" parent="273" name="national_code">
+    <column id="304" parent="274" name="national_code">
       <DataType>varchar(20)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StateNumber>1600</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="304" parent="273" name="shareholder_pkey">
+    <index id="305" parent="274" name="shareholder_pkey">
       <ColNames>shareholder_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>17056</ObjectId>
@@ -4540,7 +4547,7 @@ sequence|table|17051|17052|1
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <index id="305" parent="273" name="shareholder_national_code_key">
+    <index id="306" parent="274" name="shareholder_national_code_key">
       <ColNames>national_code</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>17058</ObjectId>
@@ -4551,34 +4558,42 @@ sequence|table|17051|17052|1
       <CollationIds>100</CollationIds>
       <CollationParentNames>pg_catalog</CollationParentNames>
     </index>
-    <key id="306" parent="273" name="shareholder_pkey">
+    <key id="307" parent="274" name="shareholder_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>17057</ObjectId>
       <Primary>1</Primary>
       <StateNumber>1600</StateNumber>
       <UnderlyingIndexId>17056</UnderlyingIndexId>
     </key>
-    <key id="307" parent="273" name="shareholder_national_code_key">
+    <key id="308" parent="274" name="shareholder_national_code_key">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>17059</ObjectId>
       <StateNumber>1600</StateNumber>
       <UnderlyingIndexId>17058</UnderlyingIndexId>
     </key>
-    <column id="308" parent="274" name="shareholder_id">
+    <column id="309" parent="275" name="shareholder_id">
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StateNumber>1602</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="309" parent="274" name="brand_id">
+    <column id="310" parent="275" name="brand_id">
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StateNumber>1602</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <foreign-key id="310" parent="274" name="shareholder_id">
+    <column id="311" parent="275" name="stock_id">
+      <DataType>integer|0s</DataType>
+      <DefaultExpression>nextval(&apos;shareholder_brand_stock_id_seq&apos;::regclass)</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StateNumber>1701</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <foreign-key id="312" parent="275" name="shareholder_id">
       <ColNames>shareholder_id</ColNames>
       <ObjectId>17063</ObjectId>
       <RefColNames>shareholder_id</RefColNames>
@@ -4588,7 +4603,7 @@ sequence|table|17051|17052|1
       <RefTableName>shareholder</RefTableName>
       <RefTableKind>table</RefTableKind>
     </foreign-key>
-    <foreign-key id="311" parent="274" name="brand_id">
+    <foreign-key id="313" parent="275" name="brand_id">
       <ColNames>brand_id</ColNames>
       <ObjectId>17068</ObjectId>
       <RefColNames>brand_id</RefColNames>
@@ -4598,7 +4613,37 @@ sequence|table|17051|17052|1
       <RefTableName>brand</RefTableName>
       <RefTableKind>table</RefTableKind>
     </foreign-key>
-    <column id="312" parent="275" name="user_id">
+    <index id="314" parent="275" name="shareholder_brand_pkey">
+      <ColNames>stock_id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>17078</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>1702</StateNumber>
+      <Unique>1</Unique>
+      <AccessMethodId>403</AccessMethodId>
+    </index>
+    <index id="315" parent="275" name="shareholder_brand_stock_id_key">
+      <ColNames>stock_id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>17080</ObjectId>
+      <StateNumber>1703</StateNumber>
+      <Unique>1</Unique>
+      <AccessMethodId>403</AccessMethodId>
+    </index>
+    <key id="316" parent="275" name="shareholder_brand_pkey">
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>17079</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>1702</StateNumber>
+      <UnderlyingIndexId>17078</UnderlyingIndexId>
+    </key>
+    <key id="317" parent="275" name="shareholder_brand_stock_id_key">
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>17081</ObjectId>
+      <StateNumber>1703</StateNumber>
+      <UnderlyingIndexId>17080</UnderlyingIndexId>
+    </key>
+    <column id="318" parent="276" name="user_id">
       <DataType>integer|0s</DataType>
       <DefaultExpression>nextval(&apos;user_table_user_id_seq&apos;::regclass)</DefaultExpression>
       <NotNull>1</NotNull>
@@ -4606,35 +4651,35 @@ sequence|table|17051|17052|1
       <StateNumber>1592</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="313" parent="275" name="name">
+    <column id="319" parent="276" name="name">
       <DataType>varchar(20)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StateNumber>1592</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="314" parent="275" name="user_name">
+    <column id="320" parent="276" name="user_name">
       <DataType>varchar(20)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StateNumber>1592</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="315" parent="275" name="email">
+    <column id="321" parent="276" name="email">
       <DataType>varchar(70)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StateNumber>1592</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="316" parent="275" name="password">
+    <column id="322" parent="276" name="password">
       <DataType>varchar|0s</DataType>
       <NotNull>1</NotNull>
       <Position>5</Position>
       <StateNumber>1592</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="317" parent="275" name="user_table_pkey">
+    <index id="323" parent="276" name="user_table_pkey">
       <ColNames>user_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>17010</ObjectId>
@@ -4643,7 +4688,7 @@ sequence|table|17051|17052|1
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <index id="318" parent="275" name="user_table_user_name_key">
+    <index id="324" parent="276" name="user_table_user_name_key">
       <ColNames>user_name</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>17012</ObjectId>
@@ -4654,7 +4699,7 @@ sequence|table|17051|17052|1
       <CollationIds>100</CollationIds>
       <CollationParentNames>pg_catalog</CollationParentNames>
     </index>
-    <index id="319" parent="275" name="user_table_email_key">
+    <index id="325" parent="276" name="user_table_email_key">
       <ColNames>email</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>17014</ObjectId>
@@ -4665,20 +4710,20 @@ sequence|table|17051|17052|1
       <CollationIds>100</CollationIds>
       <CollationParentNames>pg_catalog</CollationParentNames>
     </index>
-    <key id="320" parent="275" name="user_table_pkey">
+    <key id="326" parent="276" name="user_table_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>17011</ObjectId>
       <Primary>1</Primary>
       <StateNumber>1592</StateNumber>
       <UnderlyingIndexId>17010</UnderlyingIndexId>
     </key>
-    <key id="321" parent="275" name="user_table_user_name_key">
+    <key id="327" parent="276" name="user_table_user_name_key">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>17013</ObjectId>
       <StateNumber>1592</StateNumber>
       <UnderlyingIndexId>17012</UnderlyingIndexId>
     </key>
-    <key id="322" parent="275" name="user_table_email_key">
+    <key id="328" parent="276" name="user_table_email_key">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>17015</ObjectId>
       <StateNumber>1592</StateNumber>
